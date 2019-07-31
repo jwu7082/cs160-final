@@ -4,3 +4,7 @@ staticfiles
 .env
 db.sqlite3
 getting-started/*
+
+.DS_Store
+app/.DS_Store
+getting-started/.DS_Store
