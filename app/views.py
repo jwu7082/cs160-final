@@ -18,5 +18,11 @@ def db(request):
 
     return render(request, "db.html", {"greetings": greetings})
 
+def upload(request):
+    return render(request, "upload.html")
+
+def profile(request):
+    return render(request, "profile.html")
+
 #def urlname(request):
 #    return render(request, "urlname.html")

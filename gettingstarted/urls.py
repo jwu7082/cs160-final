@@ -18,11 +18,13 @@ urlpatterns = [
     path("", app.views.index, name="index"),
     path("db/", app.views.db, name="db"),
     path("admin/", admin.site.urls),
+    path('upload/', app.views.upload, name='upload'),
+    path('profile/', app.views.profile, name='profile'),
 ]
 
 
 ### ADDING A NEW URL ### 
-# To add a new URL: path('urlname/', views.urlname, name='urlname')
+# To add a new URL: path('urlname/', app.views.urlname, name='urlname')
 # urlname corresponds to urlname.html within app/templates
 
 # In views.py, add the following:  
