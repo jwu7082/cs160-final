@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: #515357;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+
+
+
+
+/* --------------------------- UPLOAD --------------------------- */
+/* --------- FORM ELEMENTS --------- */ 
+form {
+    background-color: rgb(249, 249, 249);
+    padding: 10rem 20rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+.input-name {
+    margin-bottom: .8rem;
+}
+
+.input-name span {
+    color: red;
+}
+
+.photo-upload-container {
+    height: 50rem;
+}
+
+.photo-upload-preview {
+    width: 45%;
+    height: 40rem;
+    position: relative;
+}
+
+#preview {
+/*    TODO: Add background for image box. Scale image (not stretch). Remove focus outline. 
+    Add hover effect (opaque black and scale out with icon) */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 6rem;
+    right: 0;
+/*    z-index: -1; */
+}
+
+.image-input {
+/*    opacity: 0;*/
+    width: 100%;
+    height: 100%;
+}
+
+input[type=submit] {
+    /* TODO: Style with gradient colors. 
+    Animation on hover. On mouse enter and leave, scale up or down. 
+    Border-radius and box shadow. */
+    position: absolute;
+    bottom: 6rem;
+    right: 20rem;
+}
+
+.audio-upload-container, .pdf-upload-container {
+    margin: 5rem 0;
+}
+
+/* TODO: RIGHT HALF --> INPUT NAME, INSTRUMENT DROPDOWN, ETC */
+
+/* --------- HEADER/FOOTER --------- */ 
+.header, .footer { 
+    height: 25vh;
+/*    background-color: indigo;*/
+}
