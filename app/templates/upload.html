@@ -13,32 +13,42 @@
 </head>
 
 <body>
-    <div class="header"></div>
-    <form action="">
-       <div class="photo-upload-container">
-          <div class="input-name">
-              Cover Photo:<br>
-          </div>
-          <div class="photo-upload-preview">
-              <input type="file" class="image-input" accept="image/*" onchange="previewImage(event)"><br>
-              <img id="preview"/>
-          </div>
-       </div>
-       
-       <div class="audio-upload-container">
-           <div class="input-name">
-               Audio File<span>*</span>:<br>
-            </div>
-           <input type="file" accept="audio/*">
-       </div>
-       <div class="pdf-upload-container">
-          <div class="input-name">
-              Sheet Music:<br>
-              <input type="file" accept="application/pdf">
-          </div>
-       </div>
-       <input type="submit">
-    </form>
-    <div class="footer"></div>
+    <div class="upload-header"></div>
+    
+    <div class="form-container">
+        <form id="form-left" action="">
+           <div class="photo-upload-container">
+              <div class="input-name">
+                  Cover Photo:<br>
+              </div>
+              <div class="photo-upload-preview">
+                  <input type="file" class="image-input" accept="image/*" onchange="previewImage(event)"><br>
+                  <img id="preview"/>
+              </div>
+           </div>
+
+           <div class="audio-upload-container">
+               <div class="input-name">
+                   Audio File<span>*</span>:<br>
+                </div>
+               <input type="file" accept="audio/*">
+           </div>
+           <div class="pdf-upload-container">
+              <div class="input-name">
+                  Sheet Music:<br>
+                  <input type="file" accept="application/pdf">
+              </div>
+           </div>
+           <input type="submit">
+        </form>
+        
+<!--
+        <form id="form-right" action="">
+            TODO: Use Bootstrap Grid for 2 columns.
+        </form>
+-->
+    </div>
+      
+    <div class="upload-footer"></div>
 </body>
 </html>

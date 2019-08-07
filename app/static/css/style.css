@@ -1,3 +1,9 @@
+/* GRADIENT COLORS 
+PURPLE: #8E2DE2
+BLUE: #4A00E0
+PINK: #fc00ff  
+*/
+
 body {
     margin: 0;
     padding: 0;
@@ -7,16 +13,58 @@ body {
 }
 
 
+/* --------------------------- HOME PAGE (INDEX) --------------------------- */
+.header {
+    background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+    height: 85vh;
+}
 
+.search-bar {
+    display: inline-block;
+    color: #333;
+    width: 55%;
+    margin: 60rem 60rem; /* TODO: CENTER THIS! Not centered right now! */
+}
+
+.search-bar__input {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 2px;
+    background-color: rgba(white, .5);
+    width: 70%;
+    display: block;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    border-bottom: 3px solid transparent;
+    transition: all .3s;
+}
+
+.search-bar__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(#000, .15);
+    border-bottom: 3px solid #fc00ff;
+}
 
 
 /* --------------------------- UPLOAD --------------------------- */
 /* --------- FORM ELEMENTS --------- */ 
-form {
+.form-container {
     background-color: rgb(249, 249, 249);
-    padding: 10rem 20rem;
     font-size: 2rem;
     position: relative;
+    height: 120vh;
+    padding: 10rem;
+}
+
+#form-left {
+    padding-left: 40rem;
+}
+
+#form-right {
+    padding-right: 40rem;
+/*    background-color:red;*/
+    /* TODO: Fix later. Use Grid for 2 columns. */
 }
 
 .input-name {
@@ -32,13 +80,13 @@ form {
 }
 
 .photo-upload-preview {
-    width: 45%;
+    width: 40rem;
     height: 40rem;
     position: relative;
 }
 
 #preview {
-/*    TODO: Add background for image box. Scale image (not stretch). Remove focus outline. 
+/*    TODO: Add background for image box. Scale image (not stretch). 
     Add hover effect (opaque black and scale out with icon) */
     position: absolute;
     width: 100%;
@@ -57,20 +105,41 @@ form {
 input[type=submit] {
     /* TODO: Style with gradient colors. 
     Animation on hover. On mouse enter and leave, scale up or down. 
-    Border-radius and box shadow. */
+    Border-radius and box shadow. 
+    Fade out until required input fields are filled? */
     position: absolute;
-    bottom: 6rem;
-    right: 20rem;
+    text-transform: uppercase;
+    bottom: 15rem;
+    right: 36rem;
+    padding: 2rem 3rem;
+    width: 18rem;
+    border-radius: 7px;
+    background-image: linear-gradient(to right bottom, #8E2DE2, #4A00E0);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: white;
+    letter-spacing: 2px;
+    margin-top: 50px;
+    font-size: 24px;
 }
 
-.audio-upload-container, .pdf-upload-container {
+input[type=submit]:hover {
+    transform: scaleX(1.05) scaleY(1.1);
+    border-radius: 8px;
+  }
+
+input:focus { /* or *:focus */
+    outline: none;
+}
+
+.audio-upload-container, 
+.pdf-upload-container {
     margin: 5rem 0;
 }
 
 /* TODO: RIGHT HALF --> INPUT NAME, INSTRUMENT DROPDOWN, ETC */
 
 /* --------- HEADER/FOOTER --------- */ 
-.header, .footer { 
-    height: 25vh;
+.upload-header { /* .footer */
+    height: 23vh;
 /*    background-color: indigo;*/
 }
