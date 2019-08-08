@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from .models import Greeting
+import requests
 
 # Create your views here.
 def index(request):
@@ -24,5 +24,13 @@ def upload(request):
 def profile(request):
     return render(request, "profile.html")
 
+def submission(request):
+    return render(request, "submission.html")
+
 #def urlname(request):
 #    return render(request, "urlname.html")
+
+
+
+# GRACENOTE API
+#filename = 
