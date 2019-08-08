@@ -12,7 +12,7 @@
     <title>Mousaic</title>
 </head>
 <body>
-    <div class="header">
+    <div id="header" class="header">
         <div class="search-container">
             <!-- put search icon image here -->
             <form action="#" class="search-bar">
@@ -21,19 +21,19 @@
         </div>
     </div>
   
-    <div class="section-recommended">
-      <div class="recent-container">
-        <p class="recommended-title">Recent Uploads</p>
+    <div class="bottom">
+      <div class="recommended-container">
+        <p>Recommended</p>
         <div class="music-container">
           <table>
             <tbody>
               <tr>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/happyrock.jpg'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" class="music-img" alt="music"></th>
+                <th><img src= "{%static "images/happyrock.jpg"%}" class="music-img" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" class="music-img" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" class="music-img" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" class="music-img" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" class="music-img" alt="music"></th>
               </tr>   
             </tbody> 
           </table>
@@ -41,17 +41,17 @@
       </div>
       
       <div class="mood-container">
-        <p class="recommended-title">Mood: Happy</p>
+        <p>Mood: Happy</p>
         <div class="music-container">
           <table>
             <tbody>
               <tr>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/happyrock.jpg'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
-                <th><img class="submission" src= "{%static 'images/download.png'%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/happyrock.jpg"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
               </tr>   
             </tbody> 
           </table>
@@ -59,7 +59,5 @@
       </div>
       
     </div>
-    
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html> 
