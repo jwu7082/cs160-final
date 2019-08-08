@@ -77,11 +77,11 @@ td, th {
 
 /* --------------------------- UPLOAD --------------------------- */
 /* --------- FORM ELEMENTS --------- */ 
-.form-container {
+.upload-form {
     background-color: rgb(249, 249, 249);
     font-size: 2rem;
     position: relative;
-    height: 12vh;
+    height: 125vh;
     padding: 10rem;
 }
 
