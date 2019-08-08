@@ -2,6 +2,9 @@ from django.urls import path, include
 
 from django.contrib import admin
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 admin.autodiscover()
 
 import app.views
@@ -22,6 +25,7 @@ urlpatterns = [
     path('profile/', app.views.profile, name='profile'),
     path('submission/', app.views.submission, name='submission'),
 ]
+
 
 
 ### ADDING A NEW URL ### 
