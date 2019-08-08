@@ -2,6 +2,9 @@ from django.urls import path, include
 
 from django.contrib import admin
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 admin.autodiscover()
 
 import app.views
@@ -20,7 +23,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('upload/', app.views.upload, name='upload'),
     path('profile/', app.views.profile, name='profile'),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 ### ADDING A NEW URL ### 

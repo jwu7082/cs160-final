@@ -10,6 +10,45 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     <title>Mousaic</title>
+    
+  <style>
+    .header {
+      width:1450px;
+      height: 450px;
+      padding-bottom: 10px;
+    }
+    p {
+      font-family: 'Titillium';
+      font-size: 40px;
+      padding-top: 30px;
+      padding-left: 30px;
+    }
+    
+    .search-bar {
+      display: inline-block;
+      color: #333;
+      width: 100%;
+      margin:auto;
+      padding-top: 340px;
+      padding-left: 370px;
+    }
+    
+    .music-container {
+      font-size: 30px;
+	    overflow: auto;
+	    white-space: nowrap;
+      width: 1400px;
+    }
+    
+    td, th {
+      padding: 40px;
+    }
+    
+    img {
+      width: 400px;
+      height: 400px;
+    }
+  </style>
 </head>
 <body>
     <div class="header">
@@ -19,6 +58,45 @@
                 <input type="text" class="search-bar__input" placeholder="Search">
             </form>
         </div>
+    </div>
+  
+    <div class="bottom">
+      <div class="recommended-container">
+        <p>Recommended</p>
+        <div class="music-container">
+          <table>
+            <tbody>
+              <tr>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/happyrock.jpg"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+              </tr>   
+            </tbody> 
+          </table>
+        </div>
+      </div>
+      
+      <div class="mood-container">
+        <p>Mood: Happy</p>
+        <div class="music-container">
+          <table>
+            <tbody>
+              <tr>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/happyrock.jpg"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+                <th><img src= "{%static "images/download.png"%}" alt="music"></th>
+              </tr>   
+            </tbody> 
+          </table>
+        </div>
+      </div>
+      
     </div>
 </body>
 </html> 
