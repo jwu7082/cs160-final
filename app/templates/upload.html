@@ -22,7 +22,7 @@
                   Cover Photo:<br>
               </div>
               <div class="photo-upload-preview">
-                  <input type="file" class="image-input" accept="image/*" onchange="previewImage(event)"><br>
+                  <input type="file" class="image-input" accept="image/*" onchange="uploadImage(event)"><br>
                   <img id="preview"/>
               </div>
            </div>
@@ -31,12 +31,12 @@
                <div class="input-name">
                    Audio File<span>*</span>:<br>
                 </div>
-               <input type="file" accept="audio/*">
+               <input type="file" accept="audio/*" onchange="uploadMusic(event)">
            </div>
            <div class="pdf-upload-container">
               <div class="input-name">
                   Sheet Music:<br>
-                  <input type="file" accept="application/pdf">
+                  <input type="file" accept="application/pdf" onchange="uploadSheet(event)">
               </div>
            </div>
            <input type="submit">

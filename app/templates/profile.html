@@ -14,11 +14,13 @@
   <title>My Profile</title>
   <style>
     .navbar {
-      background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
-      position: sticky;
-      position: -webkit-sticky;
-      max-height: 100px;
+        background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+        position: fixed;
+        max-height: 100px;
+        z-index: 2;
+        width: 100%;
     }
+      
     .nav-button {
       max-height: 100px;
       margin: auto;
@@ -108,10 +110,11 @@
         <li><a class="dropdown-item" href="./">My Profile</a></li>
         <li><a class="dropdown-item" href="../">Settings</a></li>
         <li><a class="dropdown-item" href="../upload">Log Out</a></li>
-      </div>
-    </header>
+      </ul>
+    </div>
+  </header>
     
-    <div class="row">
+    <div class="row section-submissions">
 <!-- TODO: fix sidebar -->
       <div class="sidebar col-md-2">
         <nav class="sidebar-nav sticky-top sticky-offset">
