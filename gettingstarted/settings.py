@@ -27,7 +27,7 @@ SECRET_KEY = "CHANGE_ME!!!! (P.S. the SECRET_KEY environment variable will be us
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'cs160-final-jwu7082387298.codeanyapp.com']
+ALLOWED_HOSTS = ['0.0.0.0', '127.0.0.1', 'cs160-final-jwu7082387298.codeanyapp.com', 'cs160-final-yopourquoi801026.codeanyapp.com']
 
 
 # Application definition
