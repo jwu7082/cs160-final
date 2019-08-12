@@ -10,76 +10,20 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     <title>Submission</title>
-  <style>
-    .header {
-      width: 100%;
-      height: 150px;
-    }
-    
-    .box {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    .music-information {
-      width: 70%;
-      display: flex;
-      flex-wrap: wrap;
-/*       overflow-y:scroll; */
-    }
-    .music-imag {
-      padding: 40px 40px 30px 60px;
-    }
-    .music-detail {
-      padding-top: 40px;
-    }
-    #music-name {
-      padding-left: 10px;
-      font-size: 40px;
-    }
-    #author-name {
-      font-size: 25px;
-      padding: 10px;
-    }
-    #hear-bookmark {
-      padding-left: 10px;
-      font-size: 20px;
-    }
-    .sheet-music {
-      padding: 30px 30px 10px 50px;
-    }
-    #musicsheet {
-      width: 100%
-    }
-    
-    .inspiration {
-      width: 30%;
-      height: 500px;
-    }
-    .inspired-by-text {
-      padding: 30px 10px 10px 14px;
-      font-size: 30px;
-    }
-    .inspired-by {
-      padding: 10px 10px 10px 20px;;
-    }
-    .inspired-name {
-      font-size: 30px;
-    }
-    .inspired-author {
-      font-size: 18px;
-    }
-    .inspired-bookmark {
-      font-size: 20px;
-    }
-    .heartIcon {
-      padding-left: 50px;
-    }
-    
-  </style>
 </head>
 <body>
    <!-- Use <div class="submission"></div> as a placeholder for music submissions. -->
-    <div class="header"></div>
+    <div class="header">
+      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/"> 
+        <img class="logoSubmission" src= "{%static 'images/Mousaic.png'%}" alt="logo">
+      </a>
+      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/upload"> 
+        <img class="upload" src= "{%static 'images/Upload_Icon.png'%}" alt="upload">
+      </a>
+      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/profile"> 
+        <img class="profile" src= "{%static 'images/Profile_icon.png'%}" alt="profile">
+      </a>
+  </div>
     <div class="box">
       <div class="music-information"> 
         <div class="music-imag">
@@ -89,12 +33,22 @@
           <ul style="list-style-type:none;">
             <div id="music-name"><li>MODDY GUITAR</li></div>
             <div id="author-name"><li>MODDY GUITAR</li></div>
-            <div id="hear-bookmark"><li>
-              <ion-icon name="heart"></ion-icon>
-              <ion-icon name="bookmark"></ion-icon>
-              </li>
-            </div>
           </ul>
+             <div class="inspired-bookmark">
+              <div class="heart">
+                <ion-icon name="heart"></ion-icon> 
+              </div>
+              <div class="numbers">
+                <p>30</p>
+              </div>
+              <div class="heart">
+                <ion-icon name="bookmark"></ion-icon>
+              </div>
+              <div class="numbers">
+                <p>30</p>
+              </div>
+              </div> 
+          
         </div>
          <div class="sheet-music">
           <img id="musicsheet" src= "{%static 'images/musicsheet1.png'%}" alt="music">
@@ -109,10 +63,21 @@
           <ul style="list-style-type:none;">
             <div class="inspired-name"><li>MODDY GUITAR</li></div>
             <div class="inspired-author"><li>MODDY GUITAR</li></div>
-            <div class="inspired-bookmark"><li>
-              <ion-icon name="heart"></ion-icon> 
-              <ion-icon name="bookmark"></ion-icon></li></div>
-          </ul>
+           </ul>
+            <div class="inspired-bookmark">
+              <div class="heart">
+                <ion-icon name="heart"></ion-icon> 
+              </div>
+              <div class="numbers">
+                <p>30</p>
+              </div>
+              <div class="heart">
+                <ion-icon name="bookmark"></ion-icon>
+              </div>
+              <div class="numbers">
+                <p>30</p>
+              </div>
+              </div> 
         </div>
         
          <div class="inspired-by-text"><p>Inspired: </p></div>
@@ -123,12 +88,22 @@
           <ul style="list-style-type:none;">
             <div class="inspired-name"><li>MODDY GUITAR</li></div>
             <div class="inspired-author"><li>MODDY GUITAR</li></div>
-            <div class="inspired-bookmark"> <li>
-              <ion-icon name="heart"></ion-icon>
-              <ion-icon name="bookmark"></ion-icon>
-              </li>
-            </div>
           </ul>
+            <div class="inspired-bookmark">
+              <div class="heart">
+                <ion-icon name="heart"></ion-icon> 
+              </div>
+              <div class="numbers">
+                <p>30</p>
+              </div>
+              <div class="heart">
+                <ion-icon name="bookmark"></ion-icon>
+              </div>
+              <div class="numbers">
+                <p>30</p>
+              </div>
+              </div> 
+          
         </div>
       </div>
       </div>
