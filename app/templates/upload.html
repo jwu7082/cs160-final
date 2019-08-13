@@ -13,40 +13,56 @@
 </head>
 
 <body>
-    <div class="upload-header"></div>
-    
-    <div class="upload-form">
-        <form id="form-left" action="">
-           <div class="photo-upload-container">
-              <div class="input-name">
-                  Cover Photo:<br>
-              </div>
-              <div class="photo-upload-preview">
-                  <input type="file" class="image-input" accept="image/*" onchange="uploadImage(event)"><br>
-                  <img id="preview"/>
-              </div>
-           </div>
-
-           <div class="audio-upload-container">
-               <div class="input-name">
-                   Audio File<span>*</span>:<br>
-                </div>
-               <input type="file" accept="audio/*" onchange="uploadMusic(event)">
-           </div>
-           <div class="pdf-upload-container">
-              <div class="input-name">
-                  Sheet Music:<br>
-                  <input type="file" accept="application/pdf" onchange="uploadSheet(event)">
-              </div>
-           </div>
-           <input type="submit">
-        </form>
-        
 <!--
-        <form id="form-right" action="">
-            TODO: Use Bootstrap Grid for 2 columns.
-        </form>
+    <div class="upload-header">
+        <h1>Upload</h1>
+    </div>
 -->
+    
+    <div class="upload-form container-fluid">
+       <div class="row">
+           <div class="col left">
+            <form id="form-left" action="">
+               <div class="photo-upload-container">
+                  <div class="input-name">
+                      Cover Photo<span>*</span>:<br>
+                  </div>
+                  <div class="photo-upload-preview">
+                      <input type="file" class="image-input choose-file required-file" id="choose-file" accept="image/*" onchange="uploadImage(event)" required>
+                      <label for="choose-file" class="upload-file"></label>
+                      <br>
+                      <div class="preview-container">
+                          <img id="preview"/>
+                          <div class="preview-text">Preview</div>
+                      </div>
+                  </div>
+               </div>
+
+               <div class="audio-upload-container">
+                   <div class="input-name">
+                       Audio File<span>*</span>:<br>
+                    </div>
+                   <input class="choose-file required-file" id="choose-file" type="file" accept="audio/*" onchange="uploadMusic(event)" required>
+                   <label for="choose-file" class="upload-file"></label>
+               </div>
+               
+               <div class="pdf-upload-container">
+                  <div class="input-name">
+                      Sheet Music:<br>
+                   </div>
+                    <input class="choose-file" id="choose-file" type="file" accept="application/pdf" onchange="uploadSheet(event)">
+                    <label for="choose-file" class="upload-file"></label>
+               </div>
+            </form>
+           </div>
+           
+           <div class="col right">
+               <form id="form-right" class="col" action="">
+                   sfsdfs
+               </form>
+           </div>
+       </div>
+       <input type="submit">
     </div>
       
     <div class="upload-footer"></div>
