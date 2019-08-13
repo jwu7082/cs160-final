@@ -27,6 +27,12 @@ def profile(request):
 def submission(request):
     return render(request, "submission.html")
 
+def success(request):
+    return render(request, "success.html")
+
+def search(request):
+    return render(request, "search.html")
+
 #def urlname(request):
 #    return render(request, "urlname.html")
 
