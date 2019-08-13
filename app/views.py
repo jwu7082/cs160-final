@@ -26,7 +26,11 @@ def profile(request):
 
 def submission(request):
     return render(request, "submission.html")
+  
+def bookmarks(request):
+    return render(request, "bookmarks.html")
 
 #def urlname(request):
 #    return render(request, "urlname.html")
+
 
