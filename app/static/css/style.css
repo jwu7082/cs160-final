@@ -12,6 +12,8 @@ body {
     font-weight: 400;
 }
 
+
+
 /* --------------------------- REUSABLE COMPONENTS --------------------------- */
 .submission img {
     width: 100%;
@@ -53,7 +55,7 @@ body {
 #myHeader {
     background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     padding-bottom: 10px;
 }
 
@@ -61,9 +63,8 @@ body {
     display: inline-block;
     color: #333;
     margin: auto;
-    width: 90%;
-    padding-top: 70px;
-    padding-left: 370px;
+    width: 85%;
+    padding-left: 450px;
 }
 
 .search-bar__input {
@@ -87,9 +88,9 @@ body {
 }
 
 .logo {
-  margin-left: 170px;
-  margin-top: 60px;
-  width: 1000px;
+  margin-left: 300px;
+  margin-top: 10px;
+  width: 800px;
   height: 250px;
 }
 
@@ -98,6 +99,7 @@ body {
       height: 80px;
       margin-left: 550px;
     }
+
 .profile {
       width: 120px;
       height: 80px;
@@ -225,9 +227,9 @@ input:focus { /* or *:focus */
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
  .header {
+      
       width: 100%;
       height: 150px;
-      position: fixed;
     }
     .logoSubmission {
       width: 600px;
@@ -238,7 +240,7 @@ input:focus { /* or *:focus */
     .box {
       display: flex;
       flex-wrap: wrap;
-      padding-top: 150px;
+      
     }
     .music-information {
       width: 70%;
@@ -254,10 +256,11 @@ input:focus { /* or *:focus */
     }
     #music-name {
       font-size: 40px;
+      color: white;
     }
     #author-name {
       font-size: 25px;
-     
+      color: white;
     }
     #hear-bookmark {
       padding-left: 10px;
@@ -277,15 +280,19 @@ input:focus { /* or *:focus */
     .inspired-by-text {
       padding: 30px 10px 10px 14px;
       font-size: 30px;
+      color: white;
     }
     .inspired-by {
-      padding: 10px 10px 10px 20px;;
+      padding: 10px 10px 10px 20px;
+      color: white;
     }
     .inspired-name {
       font-size: 30px;
+      color: white;
     }
     .inspired-author {
       font-size: 18px;
+      color: white;
     }
     .inspired-bookmark {
       padding-left: 40px;
@@ -296,6 +303,7 @@ input:focus { /* or *:focus */
     .numbers {
       margin-left: 5px;
       padding-right: 40px;
+      color: white;
     }
     .heart {
       font-size: 25px;
