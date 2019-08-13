@@ -9,12 +9,16 @@ body {
     padding: 0;
 /*    color: #515357;*/
     color: white;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Oxygen', sans-serif;
     font-weight: 400;
-    background-image: linear-gradient(to right top, #c09, #8E2DE2 35%, #4A00E0 80%);
-    background-image: linear-gradient(to right top, #c09 5%, #8E2DE2 35%, #4A00E0 80%);
-/*    background-image: linear-gradient(to right top, #4A00E0 15%, #8E2DE2 65%, #c09);  c09 ;*/
+    background-image: linear-gradient(to bottom right, #c09, #8E2DE2 35%, #4A00E0 80%);
+/*    background-image: linear-gradient(to right top, #c09 5%, #8E2DE2 35%, #4A00E0 80%);*/
     font-size: 62.5%;
+    position: relative;
+}
+
+*:focus {
+    outline: none;
 }
 
 /* --------------------------- REUSABLE COMPONENTS --------------------------- */
@@ -86,7 +90,9 @@ body {
 }
 
 label.upload-file::before {
-  content: "Upload File";
+    content: "Upload File";
+    letter-spacing: 2px;
+    font-weight: 400;
 }
 
 /* This appears after a file is chosen. */
@@ -113,19 +119,12 @@ label.upload-file::before {
     padding-left: 25%;
 }
 
-.right {
-    background-color: red;
-    z-index: 5;
-    width: 50%;
-    float: right;
-}
-
-#form-right {
-/*    padding-right: 12.5%;*/
-}
 
 .input-name {
     margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 2.25rem;
+    font-weight: 300;
 }
 
 .input-name span {
@@ -162,7 +161,7 @@ label.upload-file::before {
     position: absolute;
     top: 8rem;
     left: 0;
-    transform: translate(78px, 162px);
+    transform: translate(77px, 162px);
     color: #c7c7c7;
 /*    color: black;*/
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
@@ -170,7 +169,7 @@ label.upload-file::before {
     letter-spacing: 2px;
     font-size: 5rem;
     font-weight: 300;
-    padding: 5px 10px;
+    padding: 5px 20px;
     border-radius: 3px;
 }
 
@@ -180,7 +179,9 @@ label.upload-file::before {
     height: 100%;
 }
 
-input[type=submit] {
+/*input[type=submit] {*/
+#upload-button, 
+#select-sources {
     /* TODO: Style with gradient colors. 
     Animation on hover. On mouse enter and leave, scale up or down. 
     Border-radius and box shadow. 
@@ -195,13 +196,18 @@ input[type=submit] {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     color: white;
     letter-spacing: 2px;
-    margin-top: 50px;
     font-size: 24px;
+}
+
+#upload-button {
+    margin-top: 50px;
     bottom: 130px;
     right: 240px;
 }
 
-input[type=submit]:hover {
+/*input[type=submit]:hover {*/
+#upload-button:hover,
+#select-sources:hover {
     transform: scaleX(1.05) scaleY(1.1);
     border-radius: 8px;
   }
@@ -216,7 +222,136 @@ input:focus { /* or *:focus */
 }
 
 /* TODO: RIGHT HALF --> INPUT NAME, INSTRUMENT DROPDOWN, ETC */
+.right {
+/*    background-color: red;*/
+    z-index: 5;
+/*    width: 400px;*/
+    float: left;
+    margin-left: 5.5rem;
+}
 
+#form-right {
+/*    padding-right: 12.5%;*/
+}
 
+.text-entry {
+    color: white;
+    width: 80%;
+    height: 120%;
+    background: transparent;
+    font-family: inherit;
+    border: none;
+/*    font-size: 7rem;*/
+    font-size: 5.25rem;
+    letter-spacing: 1.5px;
+/*    text-transform: uppercase;*/
+    text-align: center;
+    overflow: visible;
+    padding: 1rem 0;
+}
+
+.text-entry:focus {
+    border-bottom: 3px solid #4a00e0;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c7c7c7;
+    opacity: 1; /* Firefox */
+    font-weight: 300;
+    letter-spacing: 1px;
+/*    text-transform: none;*/
+    font-size: 4rem;
+}
+
+/* POPUP */
+#popup-bookmarks {
+    position: fixed;
+    background-color: #222; /* 222 */
+    height: 75vh;
+    width: 70%;
+    z-index: 10;
+    top: 0;
+    transform: translate(20%, 15%);
+    border-radius: 3px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+/*
+    opacity: 0;
+    visibility: hidden;
+*/
+    
+}
+
+.popup-header {
+/* -webkit-background-clip: text; */
+    background-image: linear-gradient(to top right, #8E2DE2, #4A00E0);
+    margin-top: 5rem;
+}
+
+.popup-header h1 {
+/*    color: transparent;*/
+    color: white;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 1rem 5rem;
+}
+
+.popup-close {
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    right: 8px;
+}
+
+.popup-close:hover {
+/*    color: #8E2DE2;*/
+    color: #C09;
+}
+
+/* Button */
+#select-sources {
+    width: 30%; 
+    bottom: 30px;
+    right: 30px;
+}
+
+.bookmarks {
+    background-color: rgba(0, 0, 0, .1);
+    height: 310px;
+    overflow-y: scroll;
+}
+
+.grid-container {
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-item {
+    margin: 10px;
+}
+
+.bookmarks {
+/*    background-color: blue;*/
+    display: grid;
+/*
+    grid-column-gap: 20px;
+    grid-row-gap: 50px;
+*/
+/*  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center; */
+}
+
+.bookmark {
+    background-color: transparent;
+    height: 250px;
+    border-radius: 3px;
+    border: none;
+/*  margin: 30px;
+    width: 180px;
+    height: 80%; */
+}
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 /* ---------------------- USER PROFILE PAGE ---------------------- */
