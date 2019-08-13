@@ -58,12 +58,10 @@ body {
 }
 
 .choose-file + .upload-file {
-/*
-    background-color: #ee00b2;
-    background-color: #5000f1;
-    background-image: linear-gradient(to right bottom, #6214ff, #5000f1);
-*/
-    background-color: #2a2a2a;
+/*    background-color: #ee00b2;  pink*/
+/*    background-color: #5000f1;  blue */
+/*    background-image: linear-gradient(to right bottom, #6214ff, #5000f1);  purple gradient*/
+    background-color: #2a2a2a;  /* dark gray */ 
     box-sizing: border-box;
     display: block;
     font-size: 2rem;
@@ -77,12 +75,10 @@ body {
 
 .choose-file:focus + .upload-file,
 .choose-file + .upload-file:hover {
-/*
-    background-color: #dd00a6;
-    background-color: #4a00e0;
-    background-image: linear-gradient(to right bottom, #5000f1, #4400cf);
-*/
-    background-color: #222;
+/*    background-color: #dd00a6;  pink*/
+/*    background-color: #4a00e0;  blue*/
+/*    background-image: linear-gradient(to right bottom, #5000f1, #4400cf);  purple gradient*/
+    background-color: #222;     /* dark gray */ 
 }
 
 .choose-file + label {
@@ -274,10 +270,8 @@ input:focus { /* or *:focus */
     transform: translate(20%, 15%);
     border-radius: 3px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-/*
     opacity: 0;
     visibility: hidden;
-*/
     
 }
 
@@ -331,17 +325,7 @@ input:focus { /* or *:focus */
 }
 
 .bookmarks {
-/*    background-color: blue;*/
     display: grid;
-/*
-    grid-column-gap: 20px;
-    grid-row-gap: 50px;
-*/
-/*  display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center; */
 }
 
 .bookmark {
@@ -352,6 +336,42 @@ input:focus { /* or *:focus */
 /*  margin: 30px;
     width: 180px;
     height: 80%; */
+}
+
+.white-ghost-button {
+    width: 200px;
+    margin-left: 10px;
+/*    background-color: #2a2a2a;*/
+    background-color: transparent;
+    box-sizing: border-box;
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+/*    border: none;*/
+    border: 1px solid white;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.white-ghost-button:hover {
+    border: 2px solid white;
+}
+
+.inspirations,
+.instruments,
+.genres,
+.tags {
+    height: 100px;
+}
+
+.tags {
+    margin-top: 88px;
 }
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 /* ---------------------- USER PROFILE PAGE ---------------------- */

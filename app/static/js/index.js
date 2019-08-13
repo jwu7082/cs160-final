@@ -24,6 +24,8 @@ function closePopup() {
 };
 
 function submitPopup() {
+    /* TODO: Update upload page */
+    closePopup();
 };
 
 function selectSource(bookmark) {

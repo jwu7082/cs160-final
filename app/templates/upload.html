@@ -59,7 +59,29 @@
            
            <div class="col right">
                <form id="form-right" class="col" action="">
-                   <input type="text" class="text-entry" name="submission-name" placeholder="Enter Submission Name">
+                   <input type="text" class="text-entry" name="submission-name" placeholder="Enter Submission Name"> <br>
+                   
+                   <div class="inspirations">
+                       <button type="button" class="white-ghost-button" id="inspired-button" onclick="openPopup()">Inspired by:</button>
+                       <!-- TODO: Style submissions. Add name of submission. Light purple? -->
+                   </div>
+                   
+                   <div class="instruments">
+                       <button type="button" class="white-ghost-button">Instrument(s):</button>
+                       <!-- TODO: Create drop-down. -->
+                   </div>
+                   
+                   <div class="genres">
+                       <button type="button" class="white-ghost-button">Genres:</button>
+                       <!-- TODO: Hardcode genre when audio file is uploaded. -->
+                       <!-- Type: + --> 
+                   </div>
+                   
+                   <div class="tags">
+                       <button type="button" class="white-ghost-button">Tags:</button>
+                       <!-- TODO: Hardcode tags when audio file is uploaded. e.g. mood, tempo, etc -->
+                       <!-- Type: + --> 
+                   </div>
                </form>
            </div>
        </div>
