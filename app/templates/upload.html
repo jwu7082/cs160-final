@@ -59,26 +59,25 @@
            
            <div class="col right">
                <form id="form-right" class="col" action="">
-                   <input type="text" class="text-entry" name="submission-name" placeholder="Enter Submission Name"> <br>
+                   <input type="text" class="text-entry" name="submission-name" placeholder="Enter Submission Name"><br>
                    
                    <div class="inspirations">
-                       <button type="button" class="white-ghost-button" id="inspired-button" onclick="openPopup()">Inspired by:</button>
+                       <button type="button" class="right-button" id="inspired-button" onclick="openPopup()">Inspired by:</button>
                        <!-- TODO: Style submissions. Add name of submission. Light purple? -->
                    </div>
-                   
                    <div class="instruments">
-                       <button type="button" class="white-ghost-button">Instrument(s):</button>
+                       <button type="button" class="right-button">Instrument(s):</button>
                        <!-- TODO: Create drop-down. -->
                    </div>
                    
                    <div class="genres">
-                       <button type="button" class="white-ghost-button">Genres:</button>
+                       <button type="button" class="right-button">Genres:</button>
                        <!-- TODO: Hardcode genre when audio file is uploaded. -->
                        <!-- Type: + --> 
                    </div>
                    
                    <div class="tags">
-                       <button type="button" class="white-ghost-button">Tags:</button>
+                       <button type="button" class="right-button">Tags:</button>
                        <!-- TODO: Hardcode tags when audio file is uploaded. e.g. mood, tempo, etc -->
                        <!-- Type: + --> 
                    </div>
@@ -95,12 +94,79 @@
               </div>
         <div class="bookmark-container">
             <div class="bookmarks grid-container">
-                <div class="bookmark grid-item" onclick="selectSource($(this))">sdfsdf</div>
-                <div class="bookmark grid-item" onclick="selectSource($(this))">sdfsdf</div>
-                <div class="bookmark grid-item" onclick="selectSource($(this))">sdfsdf</div>
-                <div class="bookmark grid-item" onclick="selectSource($(this))">sdfsdf</div>
-                <div class="bookmark grid-item" onclick="selectSource($(this))">sdfsdf</div>
-                <div class="bookmark grid-item" onclick="selectSource($(this))">sdfsdf</div>
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/relaxing/4.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Acoustic</div>
+                    <div class="bookmark-user">jwuice</div>  
+                </div>
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/upbeat/5.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Upbeat/Pop</div>
+                    <div class="bookmark-user">archtek7</div>  
+                </div>
+                
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/acoustic/5.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Saxophone - Jazz</div>
+                    <div class="bookmark-user">procrastolotl</div>  
+                </div>
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/trending/3.jpg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Submission 1</div>
+                    <div class="bookmark-user">yuna.k</div>                 
+                </div>
+                
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/upbeat/6.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Electronic Demo 3</div>
+                    <div class="bookmark-user">archtek7</div>
+                </div>
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/trending/4.png' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">urban beats</div>
+                    <div class="bookmark-user">finessor</div>                 
+                </div>
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/acoustic/2.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Title</div>
+                    <div class="bookmark-user">cdice</div>
+                </div>
+     
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/trending/0.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Title</div>
+                    <div class="bookmark-user">archtek7</div>
+                </div>
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/beats/3.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Title</div>
+                    <div class="bookmark-user">finessor</div>
+                </div>
+                <div class="bookmark grid-item" onclick="selectSource($(this))">
+                    <div class="bookmark-image">
+                        <img src="{% static 'images/covers/trending/1.jpeg' %}" alt="">
+                    </div>
+                    <div class="bookmark-title">Title</div>
+                    <div class="bookmark-user">Ethereus</div>
+                </div>
             </div>
         </div>
         <input id="select-sources" type="submit" value="Select Sources" onclick="submitPopup()">

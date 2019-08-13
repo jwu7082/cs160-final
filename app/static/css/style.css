@@ -61,7 +61,7 @@ body {
 /*    background-color: #ee00b2;  pink*/
 /*    background-color: #5000f1;  blue */
 /*    background-image: linear-gradient(to right bottom, #6214ff, #5000f1);  purple gradient*/
-    background-color: #2a2a2a;  /* dark gray */ 
+    background-color: #3d3d3d;  /* dark gray */ 
     box-sizing: border-box;
     display: block;
     font-size: 2rem;
@@ -78,7 +78,7 @@ body {
 /*    background-color: #dd00a6;  pink*/
 /*    background-color: #4a00e0;  blue*/
 /*    background-image: linear-gradient(to right bottom, #5000f1, #4400cf);  purple gradient*/
-    background-color: #222;     /* dark gray */ 
+    background-color: #333;     /* dark gray */ 
 }
 
 .choose-file + label {
@@ -188,7 +188,6 @@ label.upload-file::before {
     padding: 2rem 3rem;
     width: 18rem;
     border-radius: 7px;
-    background-image: linear-gradient(to right bottom, #ff00bf, #8E2DE2);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     color: white;
     letter-spacing: 2px;
@@ -199,6 +198,18 @@ label.upload-file::before {
     margin-top: 50px;
     bottom: 130px;
     right: 240px;
+    background-image: linear-gradient(to right bottom, #ff00bf, #8E2DE2);
+}
+
+/* Button */
+#select-sources {
+/*    width: 30%; */
+    bottom: 30px;
+    right: 30px;
+    font-size: 20px;
+    width: 25%;
+    background-image: linear-gradient(to bottom right, #8E2DE2, #4A00E0);
+    background-image: linear-gradient(to bottom left, #ff00bf, #8E2DE2);
 }
 
 /*input[type=submit]:hover {*/
@@ -277,7 +288,7 @@ input:focus { /* or *:focus */
 
 .popup-header {
 /* -webkit-background-clip: text; */
-    background-image: linear-gradient(to top right, #8E2DE2, #4A00E0);
+    background-image: linear-gradient(to bottom right, #8E2DE2, #4A00E0);
     margin-top: 5rem;
 }
 
@@ -303,34 +314,20 @@ input:focus { /* or *:focus */
     color: #C09;
 }
 
-/* Button */
-#select-sources {
-    width: 30%; 
-    bottom: 30px;
-    right: 30px;
-}
-
 .bookmarks {
     background-color: rgba(0, 0, 0, .1);
-    height: 310px;
+    height: 320px;
     overflow-y: scroll;
-}
-
-.grid-container {
-    grid-template-columns: auto auto auto auto;
-}
-
-.grid-item {
-    margin: 10px;
-}
-
-.bookmarks {
     display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    margin-left: 10px;
 }
+
 
 .bookmark {
+    margin: 10px;
     background-color: transparent;
-    height: 250px;
+    height: 270px;
     border-radius: 3px;
     border: none;
 /*  margin: 30px;
@@ -338,7 +335,34 @@ input:focus { /* or *:focus */
     height: 80%; */
 }
 
-.white-ghost-button {
+.bookmark img {
+    width: 240px;
+    height: 190px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.bookmark-image {
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.bookmark-title,
+.bookmark-user {
+    margin: 0 10px;
+}
+
+.bookmark-title {
+    font-size: 2.4rem;
+    margin-top: 5px;
+}
+
+.bookmark-user {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+}
+
+.right-button {
     width: 200px;
     margin-left: 10px;
 /*    background-color: #2a2a2a;*/
@@ -352,15 +376,31 @@ input:focus { /* or *:focus */
     text-transform: uppercase;
     border-radius: 3px;
     cursor: pointer;
-/*    border: none;*/
-    border: 1px solid white;
     letter-spacing: 2px;
     font-weight: 500;
     margin-top: 40px;
+    
+    /*    border: none;*/
+    border: 1px solid white;
+/*
+    border: 2px solid #222;
+    color: #222;
+*/
+/*     background-color: rebeccapurple;*/
+    background-color:  #3d3d3d;
+    
+/*
+    background-color: #2a2a2a;
+    border: none;
+*/
 }
 
-.white-ghost-button:hover {
+.right-button:hover {
     border: 2px solid white;
+/*    border: 2px solid #222;*/
+    color: white;
+/*    background-color: rebeccapurple;*/
+    
 }
 
 .inspirations,
