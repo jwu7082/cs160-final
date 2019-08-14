@@ -15,13 +15,13 @@
 
 <body>
    <div class="header">
-      <div class="upload-container">
-          <img id="upload-icon" src="{% static 'images/upload_icon.png' %}" alt="" href="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/upload')">
-          <img id="profile-icon" src="{% static 'images/profile_icon.png' %}" alt="" href="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/profile')">
-      </div>
+        <img id="upload-icon" src="{% static 'images/upload_icon.png' %}" alt="" onclick="window.location.href = '/upload'">
+        <img id="profile-icon" src="{% static 'images/profile_icon.png' %}" alt="" onclick="window.location.href = '/profile'">
    </div>
    <div class="hero">
      <img id="logo" src="{% static 'images/Mousaic.png' %}" alt="">
+     <input id="home-searchbar" type="text" placeholder="Explore user submissions">
+     <ion-icon id="search-icon" name="ios-search"></ion-icon>
    </div>
    
    <div class="section-recommended">
@@ -29,7 +29,7 @@
           <h1>Trending</h1>
            <!-- This will be the start of the Bootstrap carousel -->
            <!-- Each carousel slide will be a row containing columns (individual music submissions). -->
-           <div class="trending-carousel carousel slide" id="trending-carousel" data-ride="carousel" data-interval="3500">
+           <div class="trending-carousel carousel slide" id="trending-carousel" data-ride="carousel" data-interval="3000">
                <!-- .d-block and .img-fluid on carouselimages to prevent browser default image alignment.-->
                  <div class="carousel-inner container">
                      <!-- Note: For Bootstrap 4, use carousel-item instead of item. -->

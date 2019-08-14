@@ -41,6 +41,11 @@ body {
     transform: scale(.2) translate(505rem, -416rem);
 }
 
+#upload-icon:hover,
+#profile-icon:hover {
+    cursor: pointer;
+}
+
 .submission {
     background-color: red;
     height: 100%;
@@ -54,6 +59,7 @@ body {
 .hero {
     height: 77vh;
     position: relative;
+    background-image: linear-gradient(to bottom right, #f64f59, #8E2DE2 50%, #4211ff 85%);
 }
 
 #logo {
@@ -64,7 +70,7 @@ body {
     margin-left: auto; 
     margin-right: auto;
     transform: scale(.75) translate(-4%, 3%); /* Logo image not centered. */
-    transform: scale(.75) translate(-4%, 9%); 
+    transform: scale(.75) translate(-4%, 6%); 
 }
 
 .section-recommended {
@@ -132,6 +138,51 @@ body {
     font-size: 4rem;
     letter-spacing: 1px;
     font-weight: 400;
+    color: #f7f7f7;
+}
+
+#home-searchbar {
+    border: none;
+    width: 40%;
+    padding: 1.5rem;
+    padding-left: 8rem;
+    padding-top: 4rem;
+    
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: 300;
+    letter-spacing: 1px;
+/*    color: #f7f7f7;*/
+    color: #eee;
+
+    font-size: 3rem;
+    position: absolute;
+    top: 35rem;
+    left: 41rem;
+    border-bottom: 3px solid #4A00E0; 
+/*    border-bottom: 3px solid #eee; */
+}
+
+/*
+#home-searchbar:focus {
+    border-bottom: 3px solid #222;
+}
+*/
+
+#search-icon {
+    position: absolute;
+    top: 38.5rem;
+    left: 42rem;
+    font-size: 4.5rem;
+    color: #eee;
+}
+
+
+#home-searchbar::placeholder {
+    color: #ccc;
+    opacity: 1;
+    letter-spacing: 1px;
+    font-size: 3rem;
 }
 
 /* ---------------------- USER PROFILE PAGE ---------------------- */
@@ -304,7 +355,7 @@ label.upload-file::before {
 }
 
 .text-entry {
-    color: white;
+    color: #f7f7f7;
     width: 80%;
     height: 120%;
     background: transparent;
@@ -321,7 +372,7 @@ label.upload-file::before {
     border-bottom: 3px solid #4a00e0;
 }
 
-::placeholder {
+.text-entry::placeholder {
     color: #c7c7c7;
     opacity: 1;
     font-weight: 300;
