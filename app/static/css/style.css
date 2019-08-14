@@ -162,19 +162,6 @@ body {
     padding: 0px 0px 10px 40px;
 }
 
-/* --------------------------- UPLOAD --------------------------- */
-.upload-form {
-    background-color: rgb(249, 249, 249);
-    font-size: 2rem;
-    position: relative;
-    height: 1200px;
-    padding: 10rem;
-}
-
-#form-left {
-    padding-left: 40rem;
-}
-
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 .header {
@@ -295,7 +282,7 @@ body {
 
 /* ---------------------- USER PROFILE PAGE ---------------------- */
 
-/* UPLOAD */
+/* ------------------------ UPLOAD ------------------------ */
 .choose-file {
     height: 0.1px;
     opacity: 0;
