@@ -13,7 +13,12 @@
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   <title>My Profile</title>
   <style>
-      
+    body {
+  background-image: -webkit-linear-gradient(top left, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+  background-image: -moz-linear-gradient(top left, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+  background-image: -o-linear-gradient(top left, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+  background-image: linear-gradient(to bottom right, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+}
       .sidebar {
           position: fixed;
           z-index: 2;
@@ -84,11 +89,7 @@
     
     .nav-link {
       font-size: 2em;
-      color: #4A00E0;
-    }
-    
-    .nav-link: hover {
-      color: #fc00ff;
+      color: white;
     }
     
     .thumbnail-container {
@@ -114,16 +115,16 @@
     
     .name {
       font-size: 2em;
-      color: #4A00E0;
+      color: white;
     }
     .name:hover {
-      color: #fc00ff;
+      color: #696969;
     }
     .author {
-      color: #4A00E0;
+      color: #ffffff;
     }
     .author:hover {
-      color: #fc00ff;
+      color: #696969;
     }
     .heart-bookmark {
       font-size: 20px;
