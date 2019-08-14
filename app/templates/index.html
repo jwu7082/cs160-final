@@ -30,22 +30,71 @@
            <!-- This will be the start of the Bootstrap carousel -->
            <!-- Each carousel slide will be a row containing columns (individual music submissions). -->
            <div class="trending-carousel carousel slide" id="trending-carousel" data-ride="carousel" data-interval="3000">
-               <!-- .d-block and .img-fluid on carouselimages to prevent browser default image alignment.-->
+               <!-- .d-block and .img-fluid on carousel images to prevent browser default image alignment.-->
                  <div class="carousel-inner container">
                      <!-- Note: For Bootstrap 4, use carousel-item instead of item. -->
                       <!-- First Slide -->
-                      <div class="row slide-1 item active">
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
+                      <div class="row item active">
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/6.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/4.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/5.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/trending/0.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">archtek7</div>
+                        </div>
                       </div>
+                      
                       <!-- Second Slide -->
-                      <div class="row slide-2 item">
-                          <div class="col submission">slide 2 ldfkjsdf</div>
-                          <div class="col submission">dsfsdfsd test</div>
-                          <div class="col submission">dsfsdfsd test</div>
-                          <div class="col submission">dsfsdfsd test</div>
+                      <div class="row item">
+                          <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/2.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                          </div>
+                          <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/5.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Jazz Sax</div>
+                            <div class="submission-user">procrastolotl</div>
+                          </div>
+                          <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/5.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                          </div>
+                          <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/trending/3.jpg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Submission 1</div>
+                            <div class="submission-user">yuna.k</div>
+                          </div>
                       </div>
                </div>      
            </div>
@@ -68,15 +117,50 @@
                  <div class="carousel-inner container">
                       <!-- First Slide -->
                       <div class="row item active">
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/trending/2.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/4.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/2.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/3.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
                       </div>
                       <div class="row item">
-                          <div class="col submission">slide 2 ldfkjsdf</div>
-                          <div class="col submission">slide 2 ldfkjsdf</div>
-                          <div class="col submission">slide 2 ldfkjsdf</div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/4.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/1.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
                       </div>
                   </div>
            </div>
@@ -99,14 +183,44 @@
                  <div class="carousel-inner container">
                       <!-- First Slide -->
                       <div class="row item active">
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
-                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/3.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/1.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/6.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/5.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
                       </div>
+                      
                       <div class="row item">
-                          <div class="col submission">slide 2 ldfkjsdf</div>
-                          <div class="col submission">slide 2 ldfkjsdf</div>
+                        <div class="col submission">
+                            <div class="submission-image">
+                                <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/4.jpeg' %}" alt="">
+                            </div>
+                            <div class="submission-title">Title</div>
+                            <div class="submission-user">User</div>
+                        </div>
                       </div>
                   </div>
            </div>

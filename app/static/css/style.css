@@ -47,13 +47,51 @@ body {
 }
 
 .submission {
-    background-color: red;
+/*    background-color: red;*/
     height: 100%;
     display: inline-block;
     height: 30rem;
     width: 24rem;
     margin: 0 3.5rem;
+    position: relative;
 }
+
+.submission-image { /* container for actual img */
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 3px;
+}
+.submission-image img {
+    position: absolute;
+    object-fit: cover;
+    width: 24rem;
+    height: 20rem;
+}
+
+.submission-title,
+.submission-user {
+    position: absolute;
+    margin-left: 1rem;
+}
+
+.submission-title {
+    font-size: 3.5rem;
+    bottom: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1.25rem;
+}
+.submission-user {
+    font-size: 2rem;
+    bottom: 1rem;
+}
+
+/*
+.likes,
+.bookmarks {
+    position: absolute;
+    bottom: 3rem;
+}
+*/
 
 /* ------------------------ INDEX PAGE ------------------------ */
 .hero {
@@ -81,8 +119,9 @@ body {
 /* Individual carousel. To modify individual carousel slides, see .item */
 /* [class$="-carousel"] doesn't work? */
 [class*="-carousel"] { 
-    background-color: rgba(0, 0, 0, .1);
-    height: 30rem; /* MODIFY TO CHANGE CAROUSEL/CAROUSEL SLIDE HEIGHT */
+    /* TODO Remove? */
+/*    background-color: rgba(0, 0, 0, .1); */
+    height: 37rem; /* MODIFY TO CHANGE CAROUSEL/CAROUSEL SLIDE HEIGHT */
 }
 
 /* Each individual carousel slide. */
@@ -109,10 +148,10 @@ body {
     transform: translateX(-500rem);
 }
 #trending-control .icon-prev {
-    transform: translateX(590rem) translateY(-39rem);
+    transform: translateX(590rem) translateY(-42rem);
 }
 #trending-control .icon-next {
-    transform: translateX(502.5rem) translateY(-39rem);
+    transform: translateX(502.5rem) translateY(-42rem);
 }
 #acoustic-control .icon-prev {
     transform: translateX(590rem) translateY(7rem);
@@ -121,16 +160,20 @@ body {
     transform: translateX(502.5rem) translateY(7rem);
 }
 #upbeat-control .icon-prev {
-    transform: translateX(590rem) translateY(54rem);
+    transform: translateX(590rem) translateY(55rem);
 }
 #upbeat-control .icon-next {
-    transform: translateX(502.5rem) translateY(54rem);
+    transform: translateX(502.5rem) translateY(55rem);
 }
 
 [class^="collection-"] {
 /*    background-color: red;*/
+/*
     padding: 6rem;
     padding-top: 1rem;
+*/
+    padding: 1rem 6rem;
+    padding-bottom: 0; /* TODO */
 }
 
 [class^="collection-"] h1 {
@@ -393,7 +436,6 @@ label.upload-file::before {
     box-shadow: 2rem 3rem 4rem rgba(0, 0, 0, 0.35);
     opacity: 0;
     visibility: hidden;
-
 }
 
 .popup-header {
