@@ -24,6 +24,8 @@ urlpatterns = [
     path('upload/', app.views.upload, name='upload'),
     path('profile/', app.views.profile, name='profile'),
     path('submission/', app.views.submission, name='submission'),
+    path('success/', app.views.success, name='success'),
+    path('search/', app.views.search, name='search'),
     path('bookmarks/', app.views.bookmarks, name='bookmarks'),
 ]
 

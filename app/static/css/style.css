@@ -1,18 +1,29 @@
 /* GRADIENT COLORS 
 PURPLE: #8E2DE2
-BLUE: #4A00E0
-PINK: #fc00ff  
+BLUE-PURPLE: #4A00E0
+PINK: #fc00ff  (slightly darker #eb00ee)
 */
 
 body {
     margin: 0;
     padding: 0;
-    color: #515357;
-    font-family: 'Lato', sans-serif;
+/*    color: #515357;*/
+    color: white;
+    font-family: 'Oxygen', sans-serif;
     font-weight: 400;
+    background-image: linear-gradient(to bottom right, #c09, #8E2DE2 35%, #4A00E0 80%);
+    background-image: linear-gradient(to bottom right, #c09, #8E2DE2, #4A00E0);
+    background-image: linear-gradient(to bottom right, #ff378a, #8E2DE2 50%, #4211ff 85%);
+/*    background-image: linear-gradient(to bottom right, #c09, #8E2DE2, #4211ff);*/
+/*    background-image: linear-gradient(to bottom right, #ff378a, #4A00E0, #4211ff);*/
+/*    background-image: linear-gradient(to right top, #c09 5%, #8E2DE2 35%, #4A00E0 80%);*/
+    font-size: 62.5%;
+    position: relative;
 }
 
-
+*:focus {
+    outline: none;
+}
 
 /* --------------------------- REUSABLE COMPONENTS --------------------------- */
 .submission img {
@@ -157,116 +168,39 @@ body {
     padding-left: 40rem;
 }
 
-#form-right {
-    padding-right: 40rem;
-/*    background-color:red;*/
-    /* TODO: Fix later. Use Grid for 2 columns. */
-}
-
-.input-name {
-    margin-bottom: .8rem;
-}
-
-.input-name span {
-    color: red;
-}
-
-.photo-upload-container {
-    height: 50rem;
-}
-
-.photo-upload-preview {
-    width: 40rem;
-    height: 40rem;
-    position: relative;
-}
-
-#preview {
-/*    TODO: Add background for image box. Scale image (not stretch). 
-    Add hover effect (opaque black and scale out with icon) */
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 6rem;
-    right: 0;
-/*    z-index: -1; */
-}
-
-.image-input {
-/*    opacity: 0;*/
-    width: 100%;
-    height: 100%;
-}
-
-input[type=submit] {
-    /* TODO: Style with gradient colors. 
-    Animation on hover. On mouse enter and leave, scale up or down. 
-    Border-radius and box shadow. 
-    Fade out until required input fields are filled? */
-    position: absolute;
-    text-transform: uppercase;
-    bottom: 15rem;
-    right: 36rem;
-    padding: 2rem 3rem;
-    width: 18rem;
-    border-radius: 7px;
-    background-image: linear-gradient(to right bottom, #8E2DE2, #4A00E0);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    color: white;
-    letter-spacing: 2px;
-    margin-top: 50px;
-    font-size: 24px;
-}
-
-input[type=submit]:hover {
-    transform: scaleX(1.05) scaleY(1.1);
-    border-radius: 8px;
-  }
-
-input:focus { /* or *:focus */
-    outline: none;
-}
-
-.audio-upload-container, 
-.pdf-upload-container {
-    margin: 5rem 0;
-}
-
-/* TODO: RIGHT HALF --> INPUT NAME, INSTRUMENT DROPDOWN, ETC */
-
-.upload-header {
-    height: 23vh;
-}
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 .header {
-
   width: 100%;
   height: 150px;
 }
+
 .logoSubmission {
   width: 600px;
   height: 150px;
 }
-
 
 .box {
   display: flex;
   flex-wrap: wrap;
 
 }
+
 .music-information {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
 /*       overflow-y:scroll; */
 }
+
 .music-imag {
   padding: 40px 40px 30px 60px;
 }
+
 .music-imag img {
   padding-left: 40px;
 }
+
 .music-imag img:hover {
   transform: scale(1.03);
     width: 100%;
@@ -280,17 +214,21 @@ input:focus { /* or *:focus */
   font-size: 40px;
   color: white;
 }
+
 #author-name {
   font-size: 25px;
   color: white;
 }
+
 #hear-bookmark {
   padding-left: 10px;
   font-size: 20px;
 }
+
 .sheet-music {
   padding: 30px 30px 10px 50px;
 }
+
 #musicsheet {
   width: 100%;
   padding-left:50px;
@@ -300,16 +238,19 @@ input:focus { /* or *:focus */
   width: 30%;
   height: 500px;
 }
+
 .inspired-by-text {
   padding: 30px 10px 10px 14px;
   font-size: 30px;
   color: white;
 }
+
 .inspired-by {
   margin-left: 20px;
   padding: 10px 10px 10px 20px;
   border-radius: 15px;
 }
+
 .inspired-by:hover {
   transform: scale(1.03);
   padding: 10px 10px 10px 20px;

@@ -30,6 +30,12 @@ def submission(request):
 def bookmarks(request):
     return render(request, "bookmarks.html")
 
+def success(request):
+    return render(request, "success.html")
+
+def search(request):
+    return render(request, "search.html")
+
 #def urlname(request):
 #    return render(request, "urlname.html")
 
