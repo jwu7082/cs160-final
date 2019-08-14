@@ -559,11 +559,11 @@ label.upload-file::before {
 
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
-/* .header {
+.old-header {
   display: flex;
   width: 100%;
   height: 150px;
-} */
+}
 
 .upload {
       margin-top: 40px;
@@ -595,13 +595,13 @@ label.upload-file::before {
   top: 5px;
   left: -40px;
 }
-
 .logoSubmission img {
   width: 650px;
   height: 200px;
   padding-right: 150px;
   
 }
+
 
 .box {
   display: flex;
@@ -613,11 +613,11 @@ label.upload-file::before {
   width: 70%;
   display: flex;
   flex-wrap: wrap;
+/*       overflow-y:scroll; */
 }
 .music-imag {
   padding: 40px 40px 30px 60px;
 }
-
 .music-imag img {
   padding-left: 40px;
 }
@@ -685,7 +685,6 @@ label.upload-file::before {
 .inspired-name {
   font-size: 30px;
   color: white;
-  
 }
 .inspired-author {
   font-size: 18px;
@@ -704,6 +703,7 @@ label.upload-file::before {
 }
 .heart {
   font-size: 25px;
+
 }
     
 /* ---------------------- USER PROFILE PAGE ---------------------- */
