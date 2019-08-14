@@ -14,12 +14,12 @@
 </head>
 
 <body>
-<!--
-    <div class="upload-header">
-        <h1>Upload</h1>
-    </div>
--->
-    
+   <div class="header">
+        <img id="upload-icon" src="{% static 'images/upload_icon.png' %}" alt="" onclick="window.location.href = '/upload'" alt="upload icon">
+        <img id="profile-icon" src="{% static 'images/profile_icon.png' %}" alt="" onclick="window.location.href = '/profile'" alt="profile icon">
+        <img id="logo-icon" src="{% static 'images/Mousaic.png' %}" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length)" alt="logo">
+   </div>
+   
     <div class="upload-form container-fluid">
        <div class="row">
            <div class="col left">
@@ -113,7 +113,7 @@
                     <div class="bookmark-image">
                         <img src="{% static 'images/covers/acoustic/5.jpeg' %}" alt="">
                     </div>
-                    <div class="bookmark-title">Saxophone - Jazz</div>
+                    <div class="bookmark-title">Jazz Sax</div>
                     <div class="bookmark-user">procrastolotl</div>  
                 </div>
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
@@ -128,7 +128,7 @@
                     <div class="bookmark-image">
                         <img src="{% static 'images/covers/upbeat/6.jpeg' %}" alt="">
                     </div>
-                    <div class="bookmark-title">Electronic Demo 3</div>
+                    <div class="bookmark-title">Electric Demo 3</div>
                     <div class="bookmark-user">archtek7</div>
                 </div>
                 <div class="bookmark grid-item" onclick="selectSource($(this))">

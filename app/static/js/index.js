@@ -1,16 +1,6 @@
-/* --------------------------- HOME PAGE / INDEX --------------------------- */
-//window.onscroll = function() {myFunction()};
-
-//var header = document.getElementById("header");
-//var sticky = header.offsetTop;
-//
-//function myFunction() {
-//  if (window.pageYOffset > sticky) {
-//    header.classList.add("sticky");
-//  } else {
-//    header.classList.remove("sticky");
-//  }
-//}
+function bookmark() {
+    /* Get the ID to change the right icon. */
+}
 
 /* --------------------------- UPLOAD --------------------------- */
 function openPopup() {
@@ -31,7 +21,7 @@ function submitPopup() {
 function selectSource(bookmark) {
     var border = (bookmark.css('border') === '0px none rgb(255, 255, 255)');
     if (border) {
-        bookmark.css('border', '2px solid #c0f');
+        bookmark.css('border', '3px solid #c0f');
     } else {
         bookmark.css('border', 'none');
     }
