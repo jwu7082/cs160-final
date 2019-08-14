@@ -8,29 +8,37 @@
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'vendors/normalize.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-    <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     <title>Submission</title>
 </head>
   <style>
   body {
-  background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+  background-image: linear-gradient(to bottom right, #c09, #8E2DE2 35%, #4A00E0 80%);
 }
   </style>
 <body>
    <!-- Use <div class="submission"></div> as a placeholder for music submissions. -->
     <div class="header">
-      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/"> 
-        <img class="logoSubmission" src= "{%static 'images/Mousaic.png'%}" alt="logo">
-      </a>
-      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/upload"> 
-        <img class="upload" src= "{%static 'images/Upload_Icon.png'%}" alt="upload">
-      </a>
-      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/profile"> 
-        <img class="profile" src= "{%static 'images/Profile_icon.png'%}" alt="profile">
-      </a>
+        <div class="logoSubmission">
+          <a href="http://cs160-final-panpanxu714595.codeanyapp.com/"> 
+          <img src= "{%static 'images/Logo_w__music_note.png'%}" alt="logo">
+          </a>
+        </div>
+        <div class="upload">
+          <a href="http://cs160-final-panpanxu714595.codeanyapp.com/upload">
+           <img src= "{%static 'images/Upload_Icon.png'%}" alt="upload">
+          </a>
+        </div>
+         <div class="profile dropdown">
+          <a href="http://cs160-final-panpanxu714595.codeanyapp.com/profile">
+          <img src= "{%static 'images/Profile_icon.png'%}" alt="profile">
+          </a>
+          <div class="dropdown-content">
+            <a href="../">Log out</a>
+          </div>
+        </div>
   </div>
-    <div class="box">
+      <div class="box">
       <div class="music-information"> 
         <div class="music-imag">
           <img src= "{%static 'images/download.png'%}" alt="music">
@@ -59,7 +67,9 @@
          <div class="sheet-music">
           <img id="musicsheet" src= "{%static 'images/musicsheet1.png'%}" alt="music">
         </div>
+        
     </div>
+        <div class="vl"></div>
       <div class="inspiration">
         <div class="inspired-by-text"><p>Inspired by: </p></div>
         <div>
@@ -85,7 +95,6 @@
               </div>
               </div> 
         </div>
-        
          <div class="inspired-by-text"><p>Inspired: </p></div>
         <div>
           <img class="inspired-by" src= "{%static 'images/download.png'%}" alt="music">

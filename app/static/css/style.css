@@ -24,8 +24,6 @@ body {
 /* --------------------------- REUSABLE COMPONENTS --------------------------- */
 .header {
     height: 10rem;
-/*    background-color: green;*/
-/*    position: fixed;*/
     position: absolute;
     width: 100%;
     z-index: 999;
@@ -551,3 +549,217 @@ label.upload-file::before {
 .tags {
     margin-top: 8.8rem;
 }
+
+
+
+
+
+
+
+
+
+/* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
+/* .header {
+  display: flex;
+  width: 100%;
+  height: 150px;
+} */
+
+.upload {
+      margin-top: 40px;
+      margin-left: 1150px;
+}
+ .upload img{
+      width: 120px;
+      height: 90px;
+      padding:5px;
+    }
+.upload img:hover {
+  padding: 3px;
+}
+.profile {
+  margin-left: 5px;
+  margin-top: 40px; 
+}
+.profile img {
+      width: 120px;
+      height: 90px;
+      padding: 5px;
+    }
+.profile img:hover {
+  padding: 3px;
+}
+
+.logoSubmission {
+  position: absolute;
+  top: 5px;
+  left: -40px;
+}
+
+.logoSubmission img {
+  width: 650px;
+  height: 200px;
+  padding-right: 150px;
+  
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 200px;
+
+}
+.music-information {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.music-imag {
+  padding: 40px 40px 30px 60px;
+}
+
+.music-imag img {
+  padding-left: 40px;
+}
+.music-imag img:hover {
+  transform: scale(1.03);
+    width: 100%;
+    opacity: .6;
+}
+
+.vl {
+  border-left: 4px solid white;
+  height: 1080px;
+  width: 5px;
+}
+.music-detail {
+  padding-top: 40px;
+}
+#music-name {
+  font-size: 40px;
+  color: white;
+}
+#author-name {
+  font-size: 25px;
+  color: white;
+}
+#hear-bookmark {
+  padding-left: 10px;
+  font-size: 20px;
+}
+.sheet-music {
+  padding: 0px 30px 10px 50px;
+}
+#musicsheet {
+  width: 100%;
+  padding-left:50px;
+}
+
+.inspiration {
+  width: 28%;
+  height: 500px;
+}
+.inspired-by-text {
+  padding: 30px 10px 10px 14px;
+  font-size: 30px;
+  color: white;
+}
+.inspired-by {
+  margin-left: 20px;
+  padding: 10px 10px 10px 20px;
+  border-radius: 15px;
+}
+.inspired-by:hover {
+  transform: scale(1.03);
+  padding: 10px 10px 10px 20px;
+  opacity: .6;
+}
+
+.inspired-by-info {
+  border-top: 10px;
+  border-bottom: 3px solid white;
+  margin: 0 10px;
+  padding-bottom: 20px;
+}
+
+.inspired-name {
+  font-size: 30px;
+  color: white;
+  
+}
+.inspired-author {
+  font-size: 18px;
+  color: white;
+}
+.inspired-bookmark {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+.numbers {
+  margin-left: 5px;
+  padding-right: 40px;
+  color: white;
+}
+.heart {
+  font-size: 25px;
+}
+    
+/* ---------------------- USER PROFILE PAGE ---------------------- */
+ .snippets-container {
+     display: flex;
+     flex-wrap: wrap;
+     margin-bottom: 200px;
+     height: 100%;
+   }
+ .sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 30%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 150px; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 80px;
+  padding-left: 30px;
+}
+   
+   .sidenav a {
+  padding: 6px 8px 10px 16px;
+  text-decoration: none;
+  font-size: 35px;
+  color: #D3D3D3;
+  display: block;
+}
+   
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+   
+   .snippets-box {
+     height: 100%;
+     width: 70%;
+     background-color: white;
+   }
+   
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+   
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+}
+ .dropdown-content a:hover {
+   background-color: #ddd;
+   }
+ .dropdown:hover .dropdown-content {display: block;}
