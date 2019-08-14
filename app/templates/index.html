@@ -12,106 +12,112 @@
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     <title>Mousaic</title>
 </head>
+
 <body>
-    <div id="myHeader">
-       <a href="http://cs160-final-panpanxu714595.codeanyapp.com/upload"> 
-        <img class="upload" id="homepageUpload"src= "{%static 'images/Upload_Icon.png'%}" alt="upload">
-      </a>
-      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/profile"> 
-        <img class="profile" id="homepageProfile" src= "{%static 'images/Profile_icon.png'%}" alt="profile">
-      </a>
-      
-      <a href="http://cs160-final-panpanxu714595.codeanyapp.com/"> 
-        <img class="logo" src= "{%static 'images/Mousaic.png'%}" alt="logo">
-      </a>
-        <div class="search-container">
-            <!-- put search icon image here -->
-            <form action="#" class="search-bar">
-                <input type="text" class="search-bar__input" placeholder="Search">
-            </form>
-        </div>
-  </div>
-  
-    <div class="section-recommended">
-      <div class="recent-container">
-        <p class="recommended-title">Recent Uploads</p>
-        <div class="music-container">
-          <table>
-            <tbody>
-              <tr>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/happyrock.jpg'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-              </tr> 
-              
-              <tr>
-                <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-              </tr>
-              
-              <tr>
-                <th class="submission-icon">
-                 <div class="heart">
-                   <ion-icon name="bookmark"></ion-icon>
-                  </div>
-                  <div>
-                    <ion-icon name="heart"></ion-icon>
-                  </div>
-                 
-                </th>
-              </tr>
-            </tbody> 
-          </table>
-        </div>
+   <div class="hero">
+     <img src="{% static 'images/Mousaic.png' %}" alt="">
+   </div>
+   
+   <div class="section-recommended">
+      <div class="collection-trending"> 
+          <h1>Trending</h1>
+           <!-- This will be the start of the Bootstrap carousel -->
+           <!-- Each carousel slide will be a row containing columns (individual music submissions). -->
+           <div class="trending-carousel carousel slide" id="trending-carousel" data-ride="carousel" data-interval="3500">
+               <!-- .d-block and .img-fluid on carouselimages to prevent browser default image alignment.-->
+                 <div class="carousel-inner container">
+                     <!-- Note: For Bootstrap 4, use carousel-item instead of item. -->
+                      <!-- First Slide -->
+                      <div class="row slide-1 item active">
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                      </div>
+                      <!-- Second Slide -->
+                      <div class="row slide-2 item">
+                          <div class="col submission">slide 2 ldfkjsdf</div>
+                          <div class="col submission">dsfsdfsd test</div>
+                          <div class="col submission">dsfsdfsd test</div>
+                          <div class="col submission">dsfsdfsd test</div>
+                      </div>
+               </div>      
+           </div>
+             <!-- Prev Control -->
+              <a id="trending-control" class="carousel-control left" href="#trending-carousel" role="button" data-slide="prev">
+                   <span class="icon-prev" aria-hidden="true"></span>
+                   <span class="sr-only">Previous</span>
+               </a>  
+               <!-- Next Control -->
+               <a id="trending-control" class="carousel-control right" href="#trending-carousel" role="button" data-slide="next">
+                   <span class="icon-next" aria-hidden="true"></span>
+                   <span class="sr-only">Next</span>
+              </a> 
       </div>
       
-      <div class="mood-container">
-        <p class="recommended-title">Mood: Happy</p>
-        <div class="music-container">
-          <table>
-            <tbody>
-              <tr>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/happyrock.jpg'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-                <th class="submission-imag"><div class="submission"><img src= "{%static 'images/download.png'%}" alt="music"></div></th>
-              </tr>  
-              
-               <tr>
-               <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-                 <th class="submission-name">
-                  <a href="http://cs160-final-panpanxu714595.codeanyapp.com/submission">snippet title</a></th>
-              </tr>
-            </tbody> 
-          </table>
-        </div>
+      
+      <div class="collection-acoustic"> 
+          <h1>Acoustic</h1>
+           <div class="acoustic-carousel carousel slide" id="acoustic-carousel" data-ride="carousel" data-interval="4000">
+                 <div class="carousel-inner container">
+                      <!-- First Slide -->
+                      <div class="row item active">
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                      </div>
+                      <div class="row item">
+                          <div class="col submission">slide 2 ldfkjsdf</div>
+                          <div class="col submission">slide 2 ldfkjsdf</div>
+                          <div class="col submission">slide 2 ldfkjsdf</div>
+                      </div>
+                  </div>
+           </div>
+             <!-- Prev Control -->
+              <a id="acoustic-control" class="carousel-control left" href="#acoustic-carousel" role="button" data-slide="prev">
+                   <span class="icon-prev" aria-hidden="true"></span>
+                   <span class="sr-only">Previous</span>
+               </a>  
+               <!-- Next Control -->
+               <a id="acoustic-control" class="carousel-control right" href="#acoustic-carousel" role="button" data-slide="next">
+                   <span class="icon-next" aria-hidden="true"></span>
+                   <span class="sr-only">Next</span>
+              </a> 
       </div>
       
-    </div>
-<!--     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> -->
+      
+        <div class="collection-upbeat"> 
+          <h1>Upbeat</h1>
+           <div class="upbeat-carousel carousel slide" id="upbeat-carousel" data-ride="carousel" data-interval="4000">
+                 <div class="carousel-inner container">
+                      <!-- First Slide -->
+                      <div class="row item active">
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                        <div class="col submission">dsfsdfsd test</div>
+                      </div>
+                      <div class="row item">
+                          <div class="col submission">slide 2 ldfkjsdf</div>
+                          <div class="col submission">slide 2 ldfkjsdf</div>
+                      </div>
+                  </div>
+           </div>
+             <!-- Prev Control -->
+              <a id="upbeat-control" class="carousel-control left" href="#upbeat-carousel" role="button" data-slide="prev">
+                   <span class="icon-prev" aria-hidden="true"></span>
+                   <span class="sr-only">Previous</span>
+               </a>  
+               <!-- Next Control -->
+               <a id="upbeat-control" class="carousel-control right" href="#upbeat-carousel" role="button" data-slide="next">
+                   <span class="icon-next" aria-hidden="true"></span>
+                   <span class="sr-only">Next</span>
+              </a> 
+      </div>
+      
+   </div>
+   
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> 
 </body>
 </html> 

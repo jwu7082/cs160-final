@@ -1,24 +1,20 @@
-/* GRADIENT COLORS 
+/* ------- COLORS ------- 
 PURPLE: #8E2DE2
 BLUE-PURPLE: #4A00E0
-PINK: #fc00ff  (slightly darker #eb00ee)
+PINK: #fc00ff  (slightly darker #eb00ee, #c0f) 
+ORANGE-PINK: #f64f59
 */
 
+/* --------------------------- BASE --------------------------- */
 body {
+    position: relative;
     margin: 0;
     padding: 0;
-    /*    color: #515357;*/
-    color: white;
+    background-image: linear-gradient(to bottom right, #f64f59, #8E2DE2 50%, #4211ff 85%);
     font-family: 'Oxygen', sans-serif;
+    color: white;
     font-weight: 400;
-    background-image: linear-gradient(to bottom right, #c09, #8E2DE2 35%, #4A00E0 80%);
-    background-image: linear-gradient(to bottom right, #c09, #8E2DE2, #4A00E0);
-    background-image: linear-gradient(to bottom right, #ff378a, #8E2DE2 50%, #4211ff 85%);
-    /*    background-image: linear-gradient(to bottom right, #c09, #8E2DE2, #4211ff);*/
-    /*    background-image: linear-gradient(to bottom right, #ff378a, #4A00E0, #4211ff);*/
-    /*    background-image: linear-gradient(to right top, #c09 5%, #8E2DE2 35%, #4A00E0 80%);*/
     font-size: 62.5%;
-    position: relative;
 }
 
 *:focus {
@@ -26,192 +22,128 @@ body {
 }
 
 /* --------------------------- REUSABLE COMPONENTS --------------------------- */
-.submission img {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    transform: scale(1.15);
+.header {
+    
+}
+
+.col {
+    background-color: blue;
 }
 
 .submission {
-    width: 300px;
-    height: 300px;
-    border-radius: 3px;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    background-color: black;
+    background-color: red;
+    height: 100%;
+    display: inline-block;
+    height: 30rem;
+    width: 24rem;
+    margin: 0 3.5rem;
 }
 
-.submission img:hover {
-    transform: scale(1.03);
-    width: 100%;
-    opacity: .6;
+/* ------------------------ INDEX PAGE ------------------------ */
+.hero {
+    height: 77vh;
+    position: relative;
 }
 
-/* --------------------------- HOME PAGE (INDEX) --------------------------- */
+.hero img {
+/*    background-color: red;*/
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    transform: scale(.75) translate(-4%, 3%); /* Logo image not centered. */
+}
 
+.section-recommended {
+    padding: 2rem 0 8rem 0;
+    background-color: #222;
+}
 
-.recommended-title {
-    font-size: 40px;
-    padding-top: 60px;
-    padding-left: 30px;
+/* Individual carousel. To modify individual carousel slides, see .item */
+/* [class$="-carousel"] doesn't work? */
+[class*="-carousel"] { 
+    background-color: rgba(0, 0, 0, .1);
+    height: 30rem; /* MODIFY TO CHANGE CAROUSEL/CAROUSEL SLIDE HEIGHT */
+}
+
+/* Each individual carousel slide. */
+.item {
+    margin-left: 2rem;
+}
+
+.carousel-control .icon-prev, 
+.carousel-control .icon-next {
+    font-size: 0;
+    z-index: 999;
+/*    background-color: red;*/
+}
+
+/* ============= CAROUSEL ARROWS ============= */
+.carousel-control .icon-prev {
+    background-image: url(../images/left-arrow.png);
+}
+.carousel-control .icon-next {
+    background-image: url(../images/right-arrow.png);
+}
+.carousel-control {
+/*    background-color: blue;*/
+    transform: translateX(-500rem);
+}
+#trending-control .icon-prev {
+    transform: translateX(590rem) translateY(-39rem);
+}
+#trending-control .icon-next {
+    transform: translateX(502.5rem) translateY(-39rem);
+}
+#acoustic-control .icon-prev {
+    transform: translateX(590rem) translateY(7rem);
+}
+#acoustic-control .icon-next {
+    transform: translateX(502.5rem) translateY(7rem);
+}
+#upbeat-control .icon-prev {
+    transform: translateX(590rem) translateY(54rem);
+}
+#upbeat-control .icon-next {
+    transform: translateX(502.5rem) translateY(54rem);
+}
+
+[class^="collection-"] {
+/*    background-color: red;*/
+    padding: 6rem;
+    padding-top: 1rem;
+}
+
+[class^="collection-"] h1 {
     text-transform: uppercase;
-}
-
-.submission-imag {
-    padding: 40px 40px 5px 40px;
-}
-
-.submission-name {
-    padding: 0px 0px 10px 40px;
-}
-
-.submission-icon {
-    padding: 0px 0px 10px 40px;
-}
-
-
-/* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
-.header {
-    width: 100%;
-    height: 150px;
-}
-
-.logoSubmission {
-    width: 600px;
-    height: 150px;
-}
-
-.box {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-.music-information {
-    width: 70%;
-    display: flex;
-    flex-wrap: wrap;
-    /*       overflow-y:scroll; */
-}
-
-.music-imag {
-    padding: 40px 40px 30px 60px;
-}
-
-.music-imag img {
-    padding-left: 40px;
-}
-
-.music-imag img:hover {
-    transform: scale(1.03);
-    width: 100%;
-    opacity: .6;
-}
-
-.music-detail {
-    padding-top: 40px;
-}
-
-#music-name {
-    font-size: 40px;
-    color: white;
-}
-
-#author-name {
-    font-size: 25px;
-    color: white;
-}
-
-#hear-bookmark {
-    padding-left: 10px;
-    font-size: 20px;
-}
-
-.sheet-music {
-    padding: 30px 30px 10px 50px;
-}
-
-#musicsheet {
-    width: 100%;
-    padding-left: 50px;
-}
-
-.inspiration {
-    width: 30%;
-    height: 500px;
-}
-
-.inspired-by-text {
-    padding: 30px 10px 10px 14px;
-    font-size: 30px;
-    color: white;
-}
-
-.inspired-by {
-    margin-left: 20px;
-    padding: 10px 10px 10px 20px;
-    border-radius: 15px;
-}
-
-.inspired-by:hover {
-    transform: scale(1.03);
-    padding: 10px 10px 10px 20px;
-    opacity: .6;
-}
-
-.inspired-name {
-    font-size: 30px;
-    color: white;
-}
-
-.inspired-author {
-    font-size: 18px;
-    color: white;
-}
-
-.inspired-bookmark {
-    padding-left: 40px;
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-}
-
-.numbers {
-    margin-left: 5px;
-    padding-right: 40px;
-    color: white;
-}
-
-.heart {
-    font-size: 25px;
-
+    font-size: 4rem;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 
 /* ---------------------- USER PROFILE PAGE ---------------------- */
 
 /* ------------------------ UPLOAD ------------------------ */
 .choose-file {
+    position: absolute;
     height: 0.1px;
+    width: 0.1px;
     opacity: 0;
     overflow: hidden;
-    position: absolute;
-    width: 0.1px;
     z-index: -1;
 }
 
 .choose-file + .upload-file {
-    background-color: #3d3d3d;
-    /* dark gray */
-    box-sizing: border-box;
-    display: block;
     font-size: 2rem;
     font-weight: 300;
-    padding: 1.5rem 0;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 3px;
-    width: 400px;
+    box-sizing: border-box;
+    display: block;
+    padding: 1.5rem 0;
+    width: 40rem;
+    background-color: #3d3d3d;
 }
 
 .choose-file:focus + .upload-file,
@@ -235,8 +167,8 @@ label.upload-file::before {
 }
 
 .upload-form {
-    font-size: 2rem;
     position: relative;
+    font-size: 2rem;
     height: 1200px;
     padding: 10rem;
     color: white;
@@ -261,7 +193,7 @@ label.upload-file::before {
 
 .input-name span {
     color: #ff0c0c;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -300,7 +232,7 @@ label.upload-file::before {
     letter-spacing: 2px;
     font-size: 5rem;
     font-weight: 300;
-    padding: 5px 20px;
+    padding: .5rem 2rem;
     border-radius: 3px;
 }
 
@@ -316,28 +248,27 @@ label.upload-file::before {
     position: absolute;
     text-transform: uppercase;
     padding: 2rem 3rem;
-    width: 18rem;
     border-radius: 7px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     color: white;
     letter-spacing: 2px;
-    font-size: 24px;
+    background-image: linear-gradient(to right bottom, #f64f59, #8E2DE2);
 }
 
 #upload-button {
-    margin-top: 50px;
-    bottom: 130px;
-    right: 240px;
-    background-image: linear-gradient(to right bottom, #ff00bf, #8E2DE2);
+    width: 18rem;
+    margin-top: 5rem;
+    bottom: 13rem;
+    right: 24rem;
+    font-size: 2.4rem;
 }
 
-/* Button */
+/* Bookmarks popup - submit button for inspiration source(s) */
 #select-sources {
-    bottom: 30px;
-    right: 30px;
-    font-size: 20px;
     width: 25%;
-    background-image: linear-gradient(to bottom right, #ff00bf, #8E2DE2);
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 2rem;
 }
 
 /*input[type=submit]:hover {*/
@@ -347,23 +278,17 @@ label.upload-file::before {
     border-radius: 8px;
 }
 
-input:focus {
-    /* or *:focus */
-    outline: none;
-}
-
 .audio-upload-container,
 .pdf-upload-container {
     margin: 5rem 0;
 }
 
-/* TODO: RIGHT HALF */
+/* RIGHT HALF */
 .right {
     z-index: 5;
     float: left;
     margin-left: 5.5rem;
 }
-
 
 .text-entry {
     color: white;
@@ -395,7 +320,7 @@ input:focus {
 #popup-bookmarks {
     position: fixed;
     background-color: #222;
-    height: 591px;
+    height: 59rem;
     width: 70%;
     z-index: 10;
     top: 0;
@@ -429,31 +354,31 @@ input:focus {
 }
 
 .popup-close:hover {
-    color: #C09;
+    color: #c09;
 }
 
 .bookmarks {
     background-color: rgba(0, 0, 0, .1);
-    height: 320px;
+    height: 32rem;
     overflow-y: scroll;
     display: grid;
-    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-columns: 24rem 24rem 24rem 24rem;
 /*     grid-template-columns: auto auto auto auto;*/
     margin-left: 10px;
 }
 
 
 .bookmark {
-    margin: 10px;
+    margin: 1rem;
     background-color: transparent;
-    height: 270px;
+    height: 27rem;
     border-radius: 3px;
     border: none;
 }
 
 .bookmark img {
-    width: 240px;
-    height: 190px;
+    width: 24rem;
+    height: 19rem;
     object-fit: cover;
     overflow: hidden;
 }
@@ -465,12 +390,12 @@ input:focus {
 
 .bookmark-title,
 .bookmark-user {
-    margin: 0 10px;
+    margin: 0 1rem;
 }
 
 .bookmark-title {
     font-size: 2.4rem;
-    margin-top: 5px;
+    margin-top: .5rem;
 }
 
 .bookmark-user {
@@ -479,23 +404,23 @@ input:focus {
 }
 
 .right-button {
-    width: 200px;
-    margin-left: 10px;
-    /*    background-color: #2a2a2a;*/
-    background-color: transparent;
+    cursor: pointer;
+    
     box-sizing: border-box;
     display: block;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    width: 20rem;
+    padding: 1.5rem 0;
+    
     font-size: 2rem;
     font-weight: 300;
-    padding: 1.5rem 0;
     text-align: center;
     text-transform: uppercase;
-    border-radius: 3px;
-    cursor: pointer;
     letter-spacing: 2px;
     font-weight: 500;
-    margin-top: 40px;
 
+    border-radius: 3px;
     border: 1px solid white;
     background-color:  #3d3d3d;
 
@@ -503,16 +428,15 @@ input:focus {
 
 .right-button:hover {
     border: 2px solid white;
-    color: white;
 }
 
 .inspirations,
 .instruments,
 .genres,
 .tags {
-    height: 100px;
+    height: 10rem;
 }
 
 .tags {
-    margin-top: 88px;
+    margin-top: 8.8rem;
 }
