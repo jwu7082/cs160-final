@@ -14,8 +14,14 @@
 </head>
 
 <body>
+   <div class="header">
+      <div class="upload-container">
+          <img id="upload-icon" src="{% static 'images/upload_icon.png' %}" alt="" href="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/upload')">
+          <img id="profile-icon" src="{% static 'images/profile_icon.png' %}" alt="" href="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/profile')">
+      </div>
+   </div>
    <div class="hero">
-     <img src="{% static 'images/Mousaic.png' %}" alt="">
+     <img id="logo" src="{% static 'images/Mousaic.png' %}" alt="">
    </div>
    
    <div class="section-recommended">

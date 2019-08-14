@@ -23,11 +23,22 @@ body {
 
 /* --------------------------- REUSABLE COMPONENTS --------------------------- */
 .header {
-    
+    height: 10rem;
+/*    background-color: green;*/
+/*    position: fixed;*/
+    position: absolute;
+    width: 100%;
+    z-index: 999;
 }
 
-.col {
-    background-color: blue;
+#upload-icon {
+/*    transform: scale(.1) translate(550rem, -310rem);*/
+    transform: scale(.085) translate(685rem, -350rem);
+}
+
+#profile-icon {
+/*    transform: scale(.225) translate(445rem, -377rem);*/
+    transform: scale(.2) translate(505rem, -416rem);
 }
 
 .submission {
@@ -45,7 +56,7 @@ body {
     position: relative;
 }
 
-.hero img {
+#logo {
 /*    background-color: red;*/
     position: absolute; 
     left: 0; 
@@ -53,6 +64,7 @@ body {
     margin-left: auto; 
     margin-right: auto;
     transform: scale(.75) translate(-4%, 3%); /* Logo image not centered. */
+    transform: scale(.75) translate(-4%, 9%); 
 }
 
 .section-recommended {
@@ -143,7 +155,9 @@ body {
     display: block;
     padding: 1.5rem 0;
     width: 40rem;
-    background-color: #3d3d3d;
+/*    background-color: #3d3d3d;*/
+    background-color:  #2c2c2c;
+    color: #eee;
 }
 
 .choose-file:focus + .upload-file,
@@ -250,7 +264,6 @@ label.upload-file::before {
     padding: 2rem 3rem;
     border-radius: 7px;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    color: white;
     letter-spacing: 2px;
     background-image: linear-gradient(to right bottom, #f64f59, #8E2DE2);
 }
@@ -338,12 +351,14 @@ label.upload-file::before {
 }
 
 .popup-header h1 {
-    color: white;
+/*    color: white;*/
     font-size: 4.5rem;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 2px;
     padding: 1rem 5rem;
+    
+    color: #eee;
 }
 
 .popup-close {
@@ -421,8 +436,12 @@ label.upload-file::before {
     font-weight: 500;
 
     border-radius: 3px;
-    border: 1px solid white;
-    background-color:  #3d3d3d;
+/*    border: 1px solid white;*/
+/*    background-color:  #3d3d3d;*/
+    
+    background-color:  #2c2c2c;
+    color: #eee;
+    border: 1px solid #eee;
 
 }
 
