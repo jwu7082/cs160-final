@@ -7,16 +7,16 @@ PINK: #fc00ff  (slightly darker #eb00ee)
 body {
     margin: 0;
     padding: 0;
-/*    color: #515357;*/
+    /*    color: #515357;*/
     color: white;
     font-family: 'Oxygen', sans-serif;
     font-weight: 400;
     background-image: linear-gradient(to bottom right, #c09, #8E2DE2 35%, #4A00E0 80%);
     background-image: linear-gradient(to bottom right, #c09, #8E2DE2, #4A00E0);
     background-image: linear-gradient(to bottom right, #ff378a, #8E2DE2 50%, #4211ff 85%);
-/*    background-image: linear-gradient(to bottom right, #c09, #8E2DE2, #4211ff);*/
-/*    background-image: linear-gradient(to bottom right, #ff378a, #4A00E0, #4211ff);*/
-/*    background-image: linear-gradient(to right top, #c09 5%, #8E2DE2 35%, #4A00E0 80%);*/
+    /*    background-image: linear-gradient(to bottom right, #c09, #8E2DE2, #4211ff);*/
+    /*    background-image: linear-gradient(to bottom right, #ff378a, #4A00E0, #4211ff);*/
+    /*    background-image: linear-gradient(to right top, #c09 5%, #8E2DE2 35%, #4A00E0 80%);*/
     font-size: 62.5%;
     position: relative;
 }
@@ -50,12 +50,12 @@ body {
 
 /* --------------------------- HOME PAGE (INDEX) --------------------------- */
 .sticky {
-  background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
-  position: fixed;
-  padding-bottom: 20px;
-  top: 0;
-  width: 100%;
-  height: 100px;
+    background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+    position: fixed;
+    padding-bottom: 20px;
+    top: 0;
+    width: 100%;
+    height: 100px;
 }
 
 #top-container {
@@ -99,36 +99,40 @@ body {
 }
 
 .logo {
-  margin-left: 300px;
-  margin-top: 10px;
-  width: 800px;
-  height: 250px;
+    margin-left: 300px;
+    margin-top: 10px;
+    width: 800px;
+    height: 250px;
 }
 
- .upload {
-      width: 120px;
-      height: 90px;
-      margin-left: 550px;
-      padding: 10px;
-    }
+.upload {
+    width: 120px;
+    height: 90px;
+    margin-left: 550px;
+    padding: 10px;
+}
+
 .upload:hover {
-  padding: 5px;
+    padding: 5px;
 }
 
 .profile {
-      width: 110px;
-      height: 70px;
-    }
+    width: 110px;
+    height: 70px;
+}
+
 .profile:hover {
-  width: 115px;
-  height: 75px;
+    width: 115px;
+    height: 75px;
 }
+
 #homepageUpload {
-  margin-top: 50px;
-  margin-left: 1150px;
+    margin-top: 50px;
+    margin-left: 1150px;
 }
+
 #homepageProfile {
-  margin-top: 50px;
+    margin-top: 50px;
 }
 
 .music-container {
@@ -143,18 +147,21 @@ body {
     padding-top: 60px;
     padding-left: 30px;
     text-transform: uppercase;
-    
+
 }
 
 .submission-imag {
-  padding: 40px 40px 5px 40px;
+    padding: 40px 40px 5px 40px;
 }
+
 .submission-name {
-  padding:0px 0px 10px 40px; 
+    padding: 0px 0px 10px 40px;
 }
+
 .submission-icon {
-  padding:0px 0px 10px 40px; 
+    padding: 0px 0px 10px 40px;
 }
+
 /* --------------------------- UPLOAD --------------------------- */
 .upload-form {
     background-color: rgb(249, 249, 249);
@@ -171,114 +178,486 @@ body {
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 .header {
-  width: 100%;
-  height: 150px;
+    width: 100%;
+    height: 150px;
 }
 
 .logoSubmission {
-  width: 600px;
-  height: 150px;
+    width: 600px;
+    height: 150px;
 }
 
 .box {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 
 }
 
 .music-information {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-/*       overflow-y:scroll; */
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    /*       overflow-y:scroll; */
 }
 
 .music-imag {
-  padding: 40px 40px 30px 60px;
+    padding: 40px 40px 30px 60px;
 }
 
 .music-imag img {
-  padding-left: 40px;
+    padding-left: 40px;
 }
 
 .music-imag img:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
     width: 100%;
     opacity: .6;
 }
 
 .music-detail {
-  padding-top: 40px;
+    padding-top: 40px;
 }
+
 #music-name {
-  font-size: 40px;
-  color: white;
+    font-size: 40px;
+    color: white;
 }
 
 #author-name {
-  font-size: 25px;
-  color: white;
+    font-size: 25px;
+    color: white;
 }
 
 #hear-bookmark {
-  padding-left: 10px;
-  font-size: 20px;
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 .sheet-music {
-  padding: 30px 30px 10px 50px;
+    padding: 30px 30px 10px 50px;
 }
 
 #musicsheet {
-  width: 100%;
-  padding-left:50px;
+    width: 100%;
+    padding-left: 50px;
 }
 
 .inspiration {
-  width: 30%;
-  height: 500px;
+    width: 30%;
+    height: 500px;
 }
 
 .inspired-by-text {
-  padding: 30px 10px 10px 14px;
-  font-size: 30px;
-  color: white;
+    padding: 30px 10px 10px 14px;
+    font-size: 30px;
+    color: white;
 }
 
 .inspired-by {
-  margin-left: 20px;
-  padding: 10px 10px 10px 20px;
-  border-radius: 15px;
+    margin-left: 20px;
+    padding: 10px 10px 10px 20px;
+    border-radius: 15px;
 }
 
 .inspired-by:hover {
-  transform: scale(1.03);
-  padding: 10px 10px 10px 20px;
-  opacity: .6;
+    transform: scale(1.03);
+    padding: 10px 10px 10px 20px;
+    opacity: .6;
 }
 
 .inspired-name {
-  font-size: 30px;
-  color: white;
+    font-size: 30px;
+    color: white;
 }
+
 .inspired-author {
-  font-size: 18px;
-  color: white;
+    font-size: 18px;
+    color: white;
 }
+
 .inspired-bookmark {
-  padding-left: 40px;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
 }
+
 .numbers {
-  margin-left: 5px;
-  padding-right: 40px;
-  color: white;
+    margin-left: 5px;
+    padding-right: 40px;
+    color: white;
 }
+
 .heart {
-  font-size: 25px;
+    font-size: 25px;
 
 }
-    
+
 /* ---------------------- USER PROFILE PAGE ---------------------- */
+
+/* UPLOAD */
+.choose-file {
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 0.1px;
+    z-index: -1;
+}
+
+.choose-file + .upload-file {
+    background-color: #3d3d3d;
+    /* dark gray */
+    box-sizing: border-box;
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    width: 400px;
+}
+
+.choose-file:focus + .upload-file,
+.choose-file + .upload-file:hover {
+    /*    background-color: #dd00a6;  pink*/
+    /*    background-color: #4a00e0;  blue*/
+    /*    background-image: linear-gradient(to right bottom, #5000f1, #4400cf);  purple gradient*/
+    background-color: #333;
+    /* dark gray */
+}
+
+.choose-file + label {
+    cursor: pointer;
+}
+
+label.upload-file::before {
+    content: "Upload File";
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+/* This appears after a file is chosen. */
+.required-file:valid + .upload-file::before {
+    content: "File Chosen";
+}
+
+.upload-form {
+    /*    background-color: rgb(249, 249, 249);*/
+    font-size: 2rem;
+    position: relative;
+    height: 1200px;
+    padding: 10rem;
+    color: white;
+}
+
+.left {
+    /*    background-color: blue;*/
+    width: 50%;
+    float: left;
+}
+
+#form-left {
+    padding-left: 25%;
+}
+
+
+.input-name {
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    font-size: 2.25rem;
+    font-weight: 300;
+}
+
+.input-name span {
+    color: #ff0c0c;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.photo-upload-container {
+    height: 50rem;
+}
+
+.photo-upload-preview {
+    width: 40rem;
+    height: 40rem;
+    position: relative;
+}
+
+#preview {
+    /*    TODO: Add background for image box. Scale image (not stretch). 
+            Add hover effect (opaque black and scale out with icon) */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 8rem;
+    right: 0;
+    z-index: -2;
+    background-image: linear-gradient(to right bottom, rgba(255, 0, 192, .2), rgba(170, 0, 128, .2));
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.preview-text {
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    transform: translate(77px, 162px);
+    color: #c7c7c7;
+    /*    color: black;*/
+    background-image: linear-gradient(to right bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, .3));
+    z-index: -1;
+    letter-spacing: 2px;
+    font-size: 5rem;
+    font-weight: 300;
+    padding: 5px 20px;
+    border-radius: 3px;
+}
+
+.image-input {
+    /*    opacity: 0;*/
+    width: 100%;
+    height: 100%;
+}
+
+/*input[type=submit] {*/
+#upload-button,
+#select-sources {
+    /* TODO: Style with gradient colors. 
+            Animation on hover. On mouse enter and leave, scale up or down. 
+            Border-radius and box shadow. 
+            Fade out until required input fields are filled? */
+    border: 0;
+    position: absolute;
+    text-transform: uppercase;
+    padding: 2rem 3rem;
+    width: 18rem;
+    border-radius: 7px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: white;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+#upload-button {
+    margin-top: 50px;
+    bottom: 130px;
+    right: 240px;
+    background-image: linear-gradient(to right bottom, #ff00bf, #8E2DE2);
+}
+
+/* Button */
+#select-sources {
+    /*    width: 30%; */
+    bottom: 30px;
+    right: 30px;
+    font-size: 20px;
+    width: 25%;
+    /*    background-image: linear-gradient(to bottom right, #8E2DE2, #4A00E0);*/
+    background-image: linear-gradient(to bottom right, #ff00bf, #8E2DE2);
+}
+
+/*input[type=submit]:hover {*/
+#upload-button:hover,
+#select-sources:hover {
+    transform: scaleX(1.05) scaleY(1.1);
+    border-radius: 8px;
+}
+
+input:focus {
+    /* or *:focus */
+    outline: none;
+}
+
+.audio-upload-container,
+.pdf-upload-container {
+    margin: 5rem 0;
+}
+
+/* TODO: RIGHT HALF --> INPUT NAME, INSTRUMENT DROPDOWN, ETC */
+.right {
+    /*    background-color: red;*/
+    z-index: 5;
+    /*    width: 400px;*/
+    float: left;
+    margin-left: 5.5rem;
+}
+
+#form-right {
+    /*    padding-right: 12.5%;*/
+}
+
+.text-entry {
+    color: white;
+    width: 80%;
+    height: 120%;
+    background: transparent;
+    font-family: inherit;
+    border: none;
+    /*    font-size: 7rem;*/
+    font-size: 5.25rem;
+    letter-spacing: 1.5px;
+    /*    text-transform: uppercase;*/
+    text-align: center;
+    overflow: visible;
+    padding: 1rem 0;
+}
+
+.text-entry:focus {
+    border-bottom: 3px solid #4a00e0;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c7c7c7;
+    opacity: 1;
+    /* Firefox */
+    font-weight: 300;
+    letter-spacing: 1px;
+    /*    text-transform: none;*/
+    font-size: 4rem;
+}
+
+/* POPUP */
+#popup-bookmarks {
+    position: fixed;
+    background-color: #222;
+    /* 222 */
+    height: 75vh;
+    width: 70%;
+    z-index: 10;
+    top: 0;
+    transform: translate(20%, 15%);
+    border-radius: 3px;
+    box-shadow: 2rem 3rem 4rem rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+.popup-header {
+    /* -webkit-background-clip: text; */
+    background-image: linear-gradient(to bottom right, #8E2DE2, #4A00E0);
+    margin-top: 5rem;
+}
+
+.popup-header h1 {
+    /*    color: transparent;*/
+    color: white;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 1rem 5rem;
+}
+
+.popup-close {
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    right: 8px;
+}
+
+.popup-close:hover {
+    /*    color: #8E2DE2;*/
+    color: #C09;
+}
+
+.bookmarks {
+    background-color: rgba(0, 0, 0, .1);
+    height: 320px;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    margin-left: 10px;
+}
+
+
+.bookmark {
+    margin: 10px;
+    background-color: transparent;
+    height: 270px;
+    border-radius: 3px;
+    border: none;
+    /*  margin: 30px;
+            width: 180px;
+            height: 80%; */
+}
+
+.bookmark img {
+    width: 240px;
+    height: 190px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.bookmark-image {
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.bookmark-title,
+.bookmark-user {
+    margin: 0 10px;
+}
+
+.bookmark-title {
+    font-size: 2.4rem;
+    margin-top: 5px;
+}
+
+.bookmark-user {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+}
+
+.right-button {
+    width: 200px;
+    margin-left: 10px;
+    /*    background-color: #2a2a2a;*/
+    background-color: transparent;
+    box-sizing: border-box;
+    display: block;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 1.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 40px;
+
+    /*    border: none;*/
+    border: 1px solid white;
+
+    /*
+            border: 2px solid #222;
+            color: #222;
+            background-color: rebeccapurple;
+            background-color:  #3d3d3d;
+*/
+}
+
+.right-button:hover {
+    border: 2px solid white;
+    /*    border: 2px solid #222;*/
+    color: white;
+    /*    background-color: rebeccapurple;*/
+}
+
+.inspirations,
+.instruments,
+.genres,
+.tags {
+    height: 100px;
+}
+
+.tags {
+    margin-top: 88px;
+}
