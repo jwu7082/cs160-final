@@ -29,6 +29,13 @@ body {
     position: absolute;
     width: 100%;
     z-index: 999;
+    margin-top: 1rem;
+}
+
+/* Logo on header bar (except the header bar on the home page) */
+#logo-icon {
+    position: absolute;
+    transform: scale(.4) translate(-248rem, -216rem);
 }
 
 #upload-icon {
@@ -41,6 +48,7 @@ body {
     transform: scale(.2) translate(505rem, -416rem);
 }
 
+#logo-icon:hover,
 #upload-icon:hover,
 #profile-icon:hover {
     cursor: pointer;
@@ -66,6 +74,7 @@ body {
     object-fit: cover;
     width: 24rem;
     height: 20rem;
+    border-radius: 2px;
 }
 
 .submission-title,
@@ -148,30 +157,25 @@ body {
     transform: translateX(-500rem);
 }
 #trending-control .icon-prev {
-    transform: translateX(590rem) translateY(-42rem);
+    transform: translateX(590rem) translateY(-38rem);
 }
 #trending-control .icon-next {
-    transform: translateX(502.5rem) translateY(-42rem);
+    transform: translateX(502.5rem) translateY(-38rem);
 }
 #acoustic-control .icon-prev {
-    transform: translateX(590rem) translateY(7rem);
+    transform: translateX(590rem) translateY(10rem);
 }
 #acoustic-control .icon-next {
-    transform: translateX(502.5rem) translateY(7rem);
+    transform: translateX(502.5rem) translateY(10rem);
 }
 #upbeat-control .icon-prev {
-    transform: translateX(590rem) translateY(55rem);
+    transform: translateX(590rem) translateY(57rem);
 }
 #upbeat-control .icon-next {
-    transform: translateX(502.5rem) translateY(55rem);
+    transform: translateX(502.5rem) translateY(57rem);
 }
 
 [class^="collection-"] {
-/*    background-color: red;*/
-/*
-    padding: 6rem;
-    padding-top: 1rem;
-*/
     padding: 1rem 6rem;
     padding-bottom: 0; /* TODO */
 }
@@ -280,6 +284,7 @@ label.upload-file::before {
     height: 1200px;
     padding: 10rem;
     color: white;
+    padding-top: 18rem; /* To make room for header */
 }
 
 .left {
@@ -363,7 +368,7 @@ label.upload-file::before {
 }
 
 #upload-button {
-    width: 18rem;
+    width: 30rem;
     margin-top: 5rem;
     bottom: 13rem;
     right: 24rem;
