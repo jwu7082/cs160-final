@@ -26,6 +26,7 @@ urlpatterns = [
     path('submission/', app.views.submission, name='submission'),
     path('success/', app.views.success, name='success'),
     path('search/', app.views.search, name='search'),
+    path('bookmarks/', app.views.bookmarks, name='bookmarks'),
 ]
 
 
@@ -37,3 +38,4 @@ urlpatterns = [
 # In views.py, add the following:  
 # def urlname(request):
 #    return render(request, "urlname.html")
+

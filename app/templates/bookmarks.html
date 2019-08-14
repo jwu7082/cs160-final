@@ -9,17 +9,17 @@
   <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="{% static 'vendors/normalize.css' %}" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-  <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap" rel="stylesheet">
   <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
   <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-  <title>My Profile</title>
+  <title>Bookmarks</title>
   <style>
-    body {
+      body {
   background-image: -webkit-linear-gradient(top left, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
   background-image: -moz-linear-gradient(top left, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
   background-image: -o-linear-gradient(top left, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
   background-image: linear-gradient(to bottom right, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
 }
+    
       .sidebar {
           position: fixed;
           z-index: 2;
@@ -93,6 +93,10 @@
       color: white;
     }
     
+    .nav-link: hover {
+      color: #fc00ff;
+    }
+    
     .thumbnail-container {
       width: 300px;
       height: 200px;
@@ -127,11 +131,9 @@
     .author:hover {
       color: #696969;
     }
-    .heart-bookmark {
-      font-size: 20px;
-    }
   </style>
 </head>
+
 <body>
   <!-- Use <div class="submission"></div>as a placeholder for music submissions. -->
   <header class="navbar fixed-top">
@@ -159,68 +161,14 @@
       <div class="sidebar col-md-2">
         <nav class="sidebar-nav sticky-top sticky-offset">
           <ul class="nav ">
-            <li class="nav-item"><a class="nav-link" href="./">My Snippets</a></li>
+            <li class="nav-item"><a class="nav-link" href="../profile">My Snippets</a></li>
 <!-- TODO: add bookmark page after fixing all other bugs-->
-            <li class="nav-item"><a class="nav-link" href="../bookmarks">Bookmarks</a></li>
+            <li class="nav-item"><a class="nav-link" href="./">Bookmarks</a></li>
           </ul>
         </nav>
       </div>
 
       <main class="content col-md-10 overflow-auto">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="thumbnail-container">
-              <img class=thumbnail src="{%static 'images/download.png'%}">              
-            </div>
-            <div class="info">
-              <div>
-                <a class="name" href="#">Snippet Title</a>
-              </div>
-              <div>
-                <a class="author" href="#">Author</a>
-              </div>
-              <div class="heart-bookmark">
-                <ion-icon name="heart"></ion-icon> 
-                <ion-icon name="bookmark"></ion-icon>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail-container">
-              <img class=thumbnail src="{%static 'images/download.png'%}">              
-            </div>
-            <div class="info">
-              <div>
-                <a class="name" href="#">Snippet Title</a>
-              </div>
-              <div>
-                <a class="author" href="#">Author</a>
-              </div>
-              <div class="heart-bookmark">
-                <ion-icon name="heart"></ion-icon> 
-                <ion-icon name="bookmark"></ion-icon>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail-container">
-              <img class=thumbnail src="{%static 'images/download.png'%}">              
-            </div>
-            <div class="info">
-              <div>
-                <a class="name" href="#">Snippet Title</a>
-              </div>
-              <div>
-                <a class="author" href="#">Author</a>
-              </div>
-              <div class="heart-bookmark">
-                <ion-icon name="heart"></ion-icon> 
-                <ion-icon name="bookmark"></ion-icon>
-              </div>
-            </div>
-          </div>
-        </div>
-        
         <div class="row">
           <div class="col-md-4">
             <div class="thumbnail-container">

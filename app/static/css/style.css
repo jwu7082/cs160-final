@@ -49,7 +49,236 @@ body {
 }
 
 /* --------------------------- HOME PAGE (INDEX) --------------------------- */
+.sticky {
+  background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+  position: fixed;
+  padding-bottom: 20px;
+  top: 0;
+  width: 100%;
+  height: 100px;
+}
+
+#top-container {
+    width: 100%;
+    height: 100px;
+}
+
+#myHeader {
+    background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+    width: 100%;
+    height: 70vh;
+    padding-bottom: 10px;
+}
+
+.search-bar {
+    display: inline-block;
+    color: #333;
+    margin: auto;
+    width: 85%;
+    padding-left: 450px;
+}
+
+.search-bar__input {
+    font-size: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 2px;
+    background-color: rgba(white, .5);
+    width: 70%;
+    display: block;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    border-bottom: 3px solid transparent;
+    transition: all .3s;
+}
+
+.search-bar__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(#000, .15);
+    border-bottom: 3px solid #fc00ff;
+}
+
+.logo {
+  margin-left: 300px;
+  margin-top: 10px;
+  width: 800px;
+  height: 250px;
+}
+
+ .upload {
+      width: 120px;
+      height: 90px;
+      margin-left: 550px;
+      padding: 10px;
+    }
+.upload:hover {
+  padding: 5px;
+}
+
+.profile {
+      width: 110px;
+      height: 70px;
+    }
+.profile:hover {
+  width: 115px;
+  height: 75px;
+}
+#homepageUpload {
+  margin-top: 50px;
+  margin-left: 1150px;
+}
+#homepageProfile {
+  margin-top: 50px;
+}
+
+.music-container {
+    font-size: 30px;
+    overflow: auto;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.recommended-title {
+    font-size: 40px;
+    padding-top: 60px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    
+}
+
+.submission-imag {
+  padding: 40px 40px 5px 40px;
+}
+.submission-name {
+  padding:0px 0px 10px 40px; 
+}
+.submission-icon {
+  padding:0px 0px 10px 40px; 
+}
+/* --------------------------- UPLOAD --------------------------- */
+.upload-form {
+    background-color: rgb(249, 249, 249);
+    font-size: 2rem;
+    position: relative;
+    height: 1200px;
+    padding: 10rem;
+}
+
+#form-left {
+    padding-left: 40rem;
+}
 
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
+.header {
+  width: 100%;
+  height: 150px;
+}
+
+.logoSubmission {
+  width: 600px;
+  height: 150px;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.music-information {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+/*       overflow-y:scroll; */
+}
+
+.music-imag {
+  padding: 40px 40px 30px 60px;
+}
+
+.music-imag img {
+  padding-left: 40px;
+}
+
+.music-imag img:hover {
+  transform: scale(1.03);
+    width: 100%;
+    opacity: .6;
+}
+
+.music-detail {
+  padding-top: 40px;
+}
+#music-name {
+  font-size: 40px;
+  color: white;
+}
+
+#author-name {
+  font-size: 25px;
+  color: white;
+}
+
+#hear-bookmark {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.sheet-music {
+  padding: 30px 30px 10px 50px;
+}
+
+#musicsheet {
+  width: 100%;
+  padding-left:50px;
+}
+
+.inspiration {
+  width: 30%;
+  height: 500px;
+}
+
+.inspired-by-text {
+  padding: 30px 10px 10px 14px;
+  font-size: 30px;
+  color: white;
+}
+
+.inspired-by {
+  margin-left: 20px;
+  padding: 10px 10px 10px 20px;
+  border-radius: 15px;
+}
+
+.inspired-by:hover {
+  transform: scale(1.03);
+  padding: 10px 10px 10px 20px;
+  opacity: .6;
+}
+
+.inspired-name {
+  font-size: 30px;
+  color: white;
+}
+.inspired-author {
+  font-size: 18px;
+  color: white;
+}
+.inspired-bookmark {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+.numbers {
+  margin-left: 5px;
+  padding-right: 40px;
+  color: white;
+}
+.heart {
+  font-size: 25px;
+
+}
+    
 /* ---------------------- USER PROFILE PAGE ---------------------- */
