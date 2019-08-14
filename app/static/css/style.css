@@ -52,11 +52,13 @@ body {
     height: 100px;
 }
 
-#myHeader {
-    background-image: linear-gradient(to right bottom, #8E2DE2 10%, #4A00E0 60%, #fc00ff);
+.myHeader {
+    background-image: linear-gradient(to bottom right, #c09, #8E2DE2 35%, #4A00E0 80%);
     width: 100%;
     height: 70vh;
     padding-bottom: 10px;
+    display: flex;
+  position: relative;
 }
 
 .search-bar {
@@ -88,37 +90,29 @@ body {
 }
 
 .logo {
-  margin-left: 300px;
-  margin-top: 10px;
-  width: 800px;
-  height: 250px;
+  
+  width: 100px;
+  height: 50px;
 }
 
- .upload {
-      width: 120px;
-      height: 90px;
-      margin-left: 550px;
-      padding: 10px;
-    }
-.upload:hover {
-  padding: 5px;
+.Homepageupload{
+  transform: scale(.2);
+  background-color: red;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+.Homepageupload img {
+  
+}
+.Homepageprofile {
+  transform: scale(.3)
+}
+.Homepageprofile img {
+  wodth: 120px;
+  heigh: 90px;
 }
 
-.profile {
-      width: 110px;
-      height: 70px;
-    }
-.profile:hover {
-  width: 115px;
-  height: 75px;
-}
-#homepageUpload {
-  margin-top: 50px;
-  margin-left: 1150px;
-}
-#homepageProfile {
-  margin-top: 50px;
-}
 
 .music-container {
     font-size: 30px;
@@ -240,19 +234,53 @@ input:focus { /* or *:focus */
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 .header {
-
+  display: flex;
   width: 100%;
   height: 150px;
 }
+
+.upload {
+      margin-top: 40px;
+      margin-left: 1150px;
+}
+ .upload img{
+      width: 120px;
+      height: 90px;
+      padding:5px;
+    }
+.upload img:hover {
+  padding: 3px;
+}
+.profile {
+  margin-left: 5px;
+  margin-top: 40px; 
+}
+.profile img {
+      width: 120px;
+      height: 90px;
+      padding: 5px;
+    }
+.profile img:hover {
+  padding: 3px;
+}
+
 .logoSubmission {
-  width: 600px;
-  height: 150px;
+  position: absolute;
+  top: 5px;
+  left: -40px;
+}
+.logoSubmission img {
+  width: 650px;
+  height: 200px;
+  padding-right: 150px;
+  
 }
 
 
 .box {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 200px;
 
 }
 .music-information {
@@ -273,6 +301,11 @@ input:focus { /* or *:focus */
     opacity: .6;
 }
 
+.vl {
+  border-left: 4px solid white;
+  height: 1080px;
+  width: 5px;
+}
 .music-detail {
   padding-top: 40px;
 }
@@ -289,7 +322,7 @@ input:focus { /* or *:focus */
   font-size: 20px;
 }
 .sheet-music {
-  padding: 30px 30px 10px 50px;
+  padding: 0px 30px 10px 50px;
 }
 #musicsheet {
   width: 100%;
@@ -297,7 +330,7 @@ input:focus { /* or *:focus */
 }
 
 .inspiration {
-  width: 30%;
+  width: 28%;
   height: 500px;
 }
 .inspired-by-text {
@@ -314,6 +347,13 @@ input:focus { /* or *:focus */
   transform: scale(1.03);
   padding: 10px 10px 10px 20px;
   opacity: .6;
+}
+
+.inspired-by-info {
+  border-top: 10px;
+  border-bottom: 3px solid white;
+  margin: 0 10px;
+  padding-bottom: 20px;
 }
 
 .inspired-name {
