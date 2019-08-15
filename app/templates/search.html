@@ -15,7 +15,11 @@
   <title>My Profile</title>
 </head>
 <body>
-
+   <div class="header">
+        <img id="upload-icon" src="{% static 'images/icons/upload.png' %}" alt="" onclick="window.location.href = '/upload'" alt="upload icon">
+        <img id="profile-icon" src="{% static 'images/icons/profile.png' %}" alt="" onclick="window.location.href = '/profile'" alt="profile icon">
+        <img id="logo-icon" src="{% static 'images/icons/logo-music.png' %}" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length)" alt="logo">
+   </div>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 

@@ -64,3 +64,35 @@ function uploadImage(event) {
 function uploadMusic(event) {
 
 };
+
+/* --------------------------- INDIV MUSIC SUBMISSION PAGE --------------------------- */
+
+function selectInspiration(inspiration) {
+    var border = (inspiration.css('border') === '0px none rgb(255, 255, 255)');
+    if (border) { 
+        // Only one should be actively selected at any time
+        var insp = document.getElementsByClassName('inspiration');
+        for (var i = 0; i < insp.length; i++) {
+            insp[i].style.border = 'none';
+        }
+        
+        // Set border
+        inspiration.css('border', '3px solid red');
+        
+        // Show differences on sheet music
+        console.log(inspiration.attr('class'));
+        switch(inspiration.attr('id')) {
+            case 'inspiration-1':
+                document.getElementById('diff-1').opacity = 1; // Show measure differences on sheet music
+                break;
+            case 'inspiration-2':
+                document.getElementById('diff-2').opacity = 1; // Show measure differences on sheet music
+                break;
+            case 'inspiration-3':
+                document.getElementById('diff-3').opacity = 1; // Show measure differences on sheet music
+                break;
+        }
+    } else {
+        inspiration.css('border', 'none');
+    }
+};

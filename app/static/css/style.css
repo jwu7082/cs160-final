@@ -29,6 +29,7 @@ body {
     width: 100%;
     z-index: 99;
     margin-top: 1rem;
+    top: 0;
     /*    background-color: green;*/
 }
 
@@ -620,15 +621,73 @@ label.upload-file::before {
     border: 2px solid white;
 }
 
-.inspirations,
-.instruments,
-.genres,
-.tags {
+.inspirations-box,
+.instruments-box,
+.genres-box,
+.tags-box {
     height: 10rem;
 }
 
 .tags {
     margin-top: 8.8rem;
+}
+
+/* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
+.placeholder {
+/*    background-color: green;*/
+    padding: 10rem;
+    /* To make room for header */
+}
+.section-inspirations {
+/*    background-color: red;*/
+    height: 30rem;
+    width: 100%;
+}
+
+.inspirations {
+    display: grid;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, .1);
+/*    overflow-y: scroll; UNNEEDED */
+    grid-template-columns: auto auto auto auto;
+    margin: 0 10rem;
+}
+
+.inspiration {
+    width: 24rem;
+}
+
+/* TODO */
+[class^="diff-"] {
+    position: absolute;
+/*    opacity: 0;*/
+}
+
+.diff, 
+.similar {
+    height: 11.75rem;
+    z-index: 100;
+    width: 14.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.similar{
+    /* #e6ffed */
+    background-image: linear-gradient(rgba(230, 255, 237, .8), rgba(230, 255, 237, .8));
+}
+
+.diff {
+    /* #ff7787 */
+    background-image: linear-gradient(rgba(255, 119, 135, .7), rgba(255, 119, 135, .7));
+}
+
+#d1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(41.5rem, -39rem);
 }
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */

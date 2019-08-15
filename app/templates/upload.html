@@ -63,22 +63,22 @@
                <form id="form-right" class="col" action="">
                    <input type="text" class="text-entry" name="submission-name" placeholder="Enter Submission Name"><br>
                    
-                   <div class="inspirations">
+                   <div class="inspirations-box">
                        <button type="button" class="right-button" id="inspired-button" onclick="openPopup()">Inspired by:</button>
                        <!-- TODO: Style submissions. Add name of submission. Light purple? -->
                    </div>
-                   <div class="instruments">
+                   <div class="instruments-box">
                        <button type="button" class="right-button">Instrument(s):</button>
                        <!-- TODO: Create drop-down. -->
                    </div>
                    
-                   <div class="genres">
+                   <div class="genres-box">
                        <button type="button" class="right-button">Genres:</button>
                        <!-- TODO: Hardcode genre when audio file is uploaded. -->
                        <!-- Type: + --> 
                    </div>
                    
-                   <div class="tags">
+                   <div class="tags-box">
                        <button type="button" class="right-button">Tags:</button>
                        <!-- TODO: Hardcode tags when audio file is uploaded. e.g. mood, tempo, etc -->
                        <!-- Type: + --> 
@@ -86,7 +86,8 @@
                </form>
            </div>
        </div>
-       <input id="upload-button" type="submit" value="upload" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/success')">
+<!--       <input id="upload-button" type="submit" value="upload" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/success')">-->
+       <input id="upload-button" type="submit" value="upload" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length)">
     </div>
     
     <div id="popup-bookmarks">
