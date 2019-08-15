@@ -80,16 +80,22 @@ function selectInspiration(inspiration) {
         inspiration.css('border', '3px solid red');
         
         // Show differences on sheet music
-        console.log(inspiration.attr('class'));
+        console.log(inspiration.attr('id'));
         switch(inspiration.attr('id')) {
             case 'inspiration-1':
-                document.getElementById('diff-1').opacity = 1; // Show measure differences on sheet music
+                $(".diff-1").css('opacity', '1');
+                $(".diff-2").css('opacity', '0');
+                $(".diff-3").css('opacity', '0');
                 break;
             case 'inspiration-2':
-                document.getElementById('diff-2').opacity = 1; // Show measure differences on sheet music
+                $(".diff-1").css('opacity', '0');
+                $(".diff-2").css('opacity', '1');
+                $(".diff-3").css('opacity', '0');
                 break;
             case 'inspiration-3':
-                document.getElementById('diff-3').opacity = 1; // Show measure differences on sheet music
+                $(".diff-1").css('opacity', '0');
+                $(".diff-2").css('opacity', '0');
+                $(".diff-3").css('opacity', '1');
                 break;
         }
     } else {
