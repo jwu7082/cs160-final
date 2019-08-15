@@ -28,22 +28,24 @@ body {
     width: 100%;
     z-index: 99;
     margin-top: 1rem;
+/*    background-color: green;*/
 }
 
 /* Logo on header bar (except the header bar on the home page) */
 #logo-icon {
     position: absolute;
-    transform: scale(.4) translate(-248rem, -216rem);
+    transform: scale(.4) translate(-248rem, -216rem); /* for logo w/o music note */
+    transform: scale(.5) translate(-168rem, -159rem);
 }
 
 #upload-icon {
 /*    transform: scale(.1) translate(550rem, -310rem);*/
-    transform: scale(.085) translate(685rem, -350rem);
+    transform: scale(.085) translate(685rem, -348rem);
 }
 
 #profile-icon {
 /*    transform: scale(.225) translate(445rem, -377rem);*/
-    transform: scale(.2) translate(505rem, -416rem);
+    transform: scale(.2) translate(505rem, -419rem);
 }
 
 #logo-icon:hover,
@@ -92,14 +94,6 @@ body {
     bottom: 1rem;
 }
 
-/*
-.likes,
-.bookmarks {
-    position: absolute;
-    bottom: 3rem;
-}
-*/
-
 /* ------------------------ INDEX PAGE ------------------------ */
 .hero {
     height: 77vh;
@@ -115,7 +109,7 @@ body {
     margin-left: auto; 
     margin-right: auto;
     transform: scale(.75) translate(-4%, 3%); /* Logo image not centered. */
-    transform: scale(.75) translate(-4%, 6%); 
+    transform: scale(1.1) translate(-10%, 35%); /* for logo-music instead of logo */
 }
 
 .section-recommended {
