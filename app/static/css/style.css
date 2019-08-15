@@ -133,7 +133,7 @@ body {
 .submission-user {
     cursor: pointer;
     position: absolute;
-    margin-left: 1rem;  
+    margin-left: 1rem;
     /*
     background-image: linear-gradient(to top right, #4211ff, #8E2DE2 40%);
     -webkit-background-clip: text;
@@ -155,9 +155,9 @@ body {
 
 .submission-title:hover,
 .submission-user:hover {
-/*    border-bottom: 2px solid white;*/
-/*    https://www.0to255.com/8e2de2*/
-    color: #6217a4; 
+    /*    border-bottom: 2px solid white;*/
+    /*    https://www.0to255.com/8e2de2*/
+    color: #6217a4;
 }
 
 /* ------------------------------------- INDEX PAGE ----------------------------------- */
@@ -634,12 +634,13 @@ label.upload-file::before {
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 .placeholder {
-/*    background-color: green;*/
+    /*    background-color: green;*/
     padding: 10rem;
     /* To make room for header */
 }
+
 .section-inspirations {
-/*    background-color: red;*/
+    /*    background-color: red;*/
     height: 30rem;
     width: 100%;
 }
@@ -648,7 +649,7 @@ label.upload-file::before {
     display: grid;
     height: 30rem;
     background-color: rgba(0, 0, 0, .1);
-/*    overflow-y: scroll; UNNEEDED */
+    /*    overflow-y: scroll; UNNEEDED */
     grid-template-columns: auto auto auto auto;
     margin: 0 10rem;
 }
@@ -691,10 +692,10 @@ label.upload-file::before {
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 .old-header {
-  display: flex;
-  width: 100%;
-  height: 190px;
-  overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
 }
 
 .upload {
@@ -950,19 +951,20 @@ label.upload-file::before {
     grid-template-columns: 24rem 110rem;
 }
 
-.side-bar, .main {
+.side-bar,
+.main {
     margin-top: 25rem;
 }
 
 .side-bar {
     grid-column-start: 1;
     grid-column-end: 2;
-/*    background-color: green;*/
+    /*    background-color: green;*/
     height: 140rem;
 }
 
 .filters {
-    position: -webkit-sticky; 
+    position: -webkit-sticky;
     position: sticky;
     top: 5rem;
 }
@@ -981,13 +983,60 @@ label.upload-file::before {
     bottom: 10rem;
 }
 
-.search-content {
-/*    background-color: red;*/
+.search-content,
+.search-searchbar {
+    /*    background-color: red;*/
     margin-left: 5rem;
+}
+
+.search-content {
+    /* Add distance from search bar (absolute positioned) */
+    margin-top: 5rem;
+    /* Add distance from bottom of page */
+    margin-bottom: 12rem;
 }
 
 .search-item {
     margin: 1.5rem 5.5rem;
+}
+
+.search-searchbar {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 30rem;
+    margin-bottom: 3rem;
+
+    font-family: inherit;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #eee;
+    font-size: 2rem;
+    padding: 1rem 0;
+    padding-left: 4.5rem;
+    padding-bottom: .5rem;
+    position: absolute;
+    transform: translate(0rem, -2rem);
+
+    /*    padding: 1.5rem;*/
+    /*
+    padding-left: 8rem;
+    padding-top: 4rem;
+*/
+}
+
+.search-searchbar::placeholder {
+    color: #ccc;
+    opacity: 1;
+    letter-spacing: 1px;
+    font-size: 2rem;
+}
+
+#search-search-icon {
+    z-index: 2;
+    font-size: 3rem;
+    position: absolute;
+    transform: translate(5rem, -1.5rem);
 }
 
 

@@ -28,7 +28,19 @@
         </div>
         <div class="grid-item main">
             <div class="border-left"></div>
-            
+            <input type="text" class="search-searchbar" id="search-searchbar" placeholder="Search user submissions">
+            <ion-icon id="search-search-icon" name="ios-search"></ion-icon>
+            <script>
+                /* Detect enter key on search bar input field */
+                const search = document.getElementById("search-searchbar");
+                search.addEventListener("keyup", function(event) {
+                    if (event.key === "Enter") {
+                        window.location.href = '/search'
+                    }
+                });
+
+            </script>
+
             <div class="search-content">
 
                 <div class="row">
@@ -315,10 +327,6 @@
                         <div class="submission-user">User</div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>
