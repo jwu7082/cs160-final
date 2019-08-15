@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'vendors/normalize.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" /> 
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
     <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
     <title>Mousaic</title>
 </head>
 
 <body>
-   <div class="header">
+    <div class="header">
         <img id="upload-icon" src="{% static 'images/icons/upload.png' %}" alt="" onclick="window.location.href = '/upload'" alt="upload icon">
         <img id="profile-icon" src="{% static 'images/icons/profile.png' %}" alt="" onclick="window.location.href = '/profile'" alt="profile icon">
-   </div>
-   <div class="hero">
-     <img id="logo" src="{% static 'images/icons/logo-music.png' %}" alt="logo">
-     <input id="home-searchbar" type="text" placeholder="Explore user submissions">
-     <ion-icon id="search-icon" name="ios-search"></ion-icon>
-     <script>
-         /* Detect enter key on search bar input field */
-        const search = document.getElementById("home-searchbar");
-        search.addEventListener("keyup", function(event) {
-            if (event.key === "Enter") {
-                window.location.href = '/search'
-            }
-        });
-     </script>
-   </div>
-   
-   <div class="section-recommended">
-      <div class="collection-trending"> 
-          <h1>Trending</h1>
-           <!-- This will be the start of the Bootstrap carousel -->
-           <!-- Each carousel slide will be a row containing columns (individual music submissions). -->
-           <div class="trending-carousel carousel slide" id="trending-carousel" data-ride="carousel" data-interval="6000">
-               <!-- .d-block and .img-fluid on carousel images to prevent browser default image alignment.-->
-                 <div class="carousel-inner container">
-                     <!-- Note: For Bootstrap 4, use carousel-item instead of item. -->
-                      <!-- First Slide -->
-                      <div class="row item active">
+    </div>
+    <div class="hero">
+        <img id="logo" src="{% static 'images/icons/logo-music.png' %}" alt="logo">
+        <input id="home-searchbar" type="text" placeholder="Explore user submissions">
+        <ion-icon id="search-icon" name="ios-search"></ion-icon>
+        <script>
+            /* Detect enter key on search bar input field */
+            const search = document.getElementById("home-searchbar");
+            search.addEventListener("keyup", function(event) {
+//     var text = document.getElementById("home-searchbar").value;
+                if (event.key === "Enter") {
+//                    parent.document.getElementById('search-searchbar').setAttribute('placeholder', text);
+                    //                    console.log(text);
+                    //                    console.log(parent.document.getElementById('search-searchbar').getAttribute('placeholder'));
+                    window.location.href = '/search';
+                }
+            });
+
+        </script>
+    </div>
+
+    <div class="section-recommended">
+        <div class="collection-trending">
+            <h1>Trending</h1>
+            <!-- This will be the start of the Bootstrap carousel -->
+            <!-- Each carousel slide will be a row containing columns (individual music submissions). -->
+            <div class="trending-carousel carousel slide" id="trending-carousel" data-ride="carousel" data-interval="6000">
+                <!-- .d-block and .img-fluid on carousel images to prevent browser default image alignment.-->
+                <div class="carousel-inner container">
+                    <!-- Note: For Bootstrap 4, use carousel-item instead of item. -->
+                    <!-- First Slide -->
+                    <div class="row item active">
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/6.jpeg' %}" alt="">
                             </div>
@@ -63,17 +69,17 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/4.jpeg' %}" alt="">
                             </div>
@@ -81,17 +87,17 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/5.jpeg' %}" alt="">
                             </div>
@@ -100,132 +106,132 @@
                         </div>
                         <div class="col submission">
                             <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/trending/0.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Title</div>
                             <div class="submission-user">archtek7</div>
                         </div>
-                      </div>
-                      
-                      <!-- Second Slide -->
-                      <div class="row item">
-                          <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                    </div>
+
+                    <!-- Second Slide -->
+                    <div class="row item">
+                        <div class="col submission">
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/2.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Title</div>
                             <div class="submission-user">User</div>
-                          </div>
-                          <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/5.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Jazz Sax</div>
                             <div class="submission-user">procrastolotl</div>
-                          </div>
-                          <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/5.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Title</div>
                             <div class="submission-user">User</div>
-                          </div>
-                          <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                        </div>
+                        <div class="col submission">
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/trending/3.jpg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Submission 1</div>
                             <div class="submission-user">yuna.k</div>
-                          </div>
-                      </div>
-               </div>      
-           </div>
-             <!-- Prev Control -->
-              <a id="trending-control" class="carousel-control left" href="#trending-carousel" role="button" data-slide="prev">
-                   <span class="icon-prev" aria-hidden="true"></span>
-                   <span class="sr-only">Previous</span>
-               </a>  
-               <!-- Next Control -->
-               <a id="trending-control" class="carousel-control right" href="#trending-carousel" role="button" data-slide="next">
-                   <span class="icon-next" aria-hidden="true"></span>
-                   <span class="sr-only">Next</span>
-              </a> 
-      </div>
-      
-      
-      <div class="collection-acoustic"> 
-          <h1>Acoustic</h1>
-           <div class="acoustic-carousel carousel slide" id="acoustic-carousel" data-ride="carousel" data-interval="4000">
-                 <div class="carousel-inner container">
-                      <!-- First Slide -->
-                      <div class="row item active">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Prev Control -->
+            <a id="trending-control" class="carousel-control left" href="#trending-carousel" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <!-- Next Control -->
+            <a id="trending-control" class="carousel-control right" href="#trending-carousel" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <div class="collection-acoustic">
+            <h1>Acoustic</h1>
+            <div class="acoustic-carousel carousel slide" id="acoustic-carousel" data-ride="carousel" data-interval="4000">
+                <div class="carousel-inner container">
+                    <!-- First Slide -->
+                    <div class="row item active">
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/trending/2.jpeg' %}" alt="">
                             </div>
@@ -233,17 +239,17 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/relaxing/4.jpeg' %}" alt="">
                             </div>
@@ -251,17 +257,17 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/2.jpeg' %}" alt="">
                             </div>
@@ -269,37 +275,37 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/3.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Title</div>
                             <div class="submission-user">User</div>
                         </div>
-                      </div>
-                      <div class="row item">
+                    </div>
+                    <div class="row item">
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/4.jpeg' %}" alt="">
                             </div>
@@ -307,57 +313,57 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/acoustic/1.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Title</div>
                             <div class="submission-user">User</div>
                         </div>
-                      </div>
-                  </div>
-           </div>
-             <!-- Prev Control -->
-              <a id="acoustic-control" class="carousel-control left" href="#acoustic-carousel" role="button" data-slide="prev">
-                   <span class="icon-prev" aria-hidden="true"></span>
-                   <span class="sr-only">Previous</span>
-               </a>  
-               <!-- Next Control -->
-               <a id="acoustic-control" class="carousel-control right" href="#acoustic-carousel" role="button" data-slide="next">
-                   <span class="icon-next" aria-hidden="true"></span>
-                   <span class="sr-only">Next</span>
-              </a> 
-      </div>
-      
-      
-        <div class="collection-upbeat"> 
-          <h1>Upbeat</h1>
-           <div class="upbeat-carousel carousel slide" id="upbeat-carousel" data-ride="carousel" data-interval="5500">
-                 <div class="carousel-inner container">
-                      <!-- First Slide -->
-                      <div class="row item active">
+                    </div>
+                </div>
+            </div>
+            <!-- Prev Control -->
+            <a id="acoustic-control" class="carousel-control left" href="#acoustic-carousel" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <!-- Next Control -->
+            <a id="acoustic-control" class="carousel-control right" href="#acoustic-carousel" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+
+        <div class="collection-upbeat">
+            <h1>Upbeat</h1>
+            <div class="upbeat-carousel carousel slide" id="upbeat-carousel" data-ride="carousel" data-interval="5500">
+                <div class="carousel-inner container">
+                    <!-- First Slide -->
+                    <div class="row item active">
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/3.jpeg' %}" alt="">
                             </div>
@@ -365,17 +371,17 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/1.jpeg' %}" alt="">
                             </div>
@@ -383,17 +389,17 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/6.jpeg' %}" alt="">
                             </div>
@@ -401,60 +407,61 @@
                             <div class="submission-user">User</div>
                         </div>
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/5.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Title</div>
                             <div class="submission-user">User</div>
                         </div>
-                      </div>
-                      
-                      <div class="row item">
+                    </div>
+
+                    <div class="row item">
                         <div class="col submission">
-                           <div class="submission-hover">
-                               <div class="submission-like">
-                                   <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                               <div class="submission-play">
-                                   <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
-                               </div>
-                               <div class="submission-bookmark">
-                                  <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
-                               </div>
-                           </div>
+                            <div class="submission-hover">
+                                <div class="submission-like">
+                                    <ion-icon name="ios-heart" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                                <div class="submission-play">
+                                    <ion-icon name="ios-play-circle" onclick="iconClickPlay(this)"></ion-icon>
+                                </div>
+                                <div class="submission-bookmark">
+                                    <ion-icon name="ios-bookmark" onclick="iconClick($(this))"></ion-icon>
+                                </div>
+                            </div>
                             <div class="submission-image">
                                 <img class="d-block img-fluid" src="{% static 'images/covers/upbeat/4.jpeg' %}" alt="">
                             </div>
                             <div class="submission-title" onclick="window.location.href = '/submission'">Title</div>
                             <div class="submission-user">User</div>
                         </div>
-                      </div>
-                  </div>
-           </div>
-             <!-- Prev Control -->
-              <a id="upbeat-control" class="carousel-control left" href="#upbeat-carousel" role="button" data-slide="prev">
-                   <span class="icon-prev" aria-hidden="true"></span>
-                   <span class="sr-only">Previous</span>
-               </a>  
-               <!-- Next Control -->
-               <a id="upbeat-control" class="carousel-control right" href="#upbeat-carousel" role="button" data-slide="next">
-                   <span class="icon-next" aria-hidden="true"></span>
-                   <span class="sr-only">Next</span>
-              </a> 
-      </div>
-      
-   </div>
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script> 
+                    </div>
+                </div>
+            </div>
+            <!-- Prev Control -->
+            <a id="upbeat-control" class="carousel-control left" href="#upbeat-carousel" role="button" data-slide="prev">
+                <span class="icon-prev" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <!-- Next Control -->
+            <a id="upbeat-control" class="carousel-control right" href="#upbeat-carousel" role="button" data-slide="next">
+                <span class="icon-next" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
-</html> 
+
+</html>
