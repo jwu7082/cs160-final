@@ -1,5 +1,33 @@
-function bookmark() {
-    /* Get the ID to change the right icon. */
+/* --------------------------- HOME/INDEX --------------------------- */
+/* For the heart/bookmark icons */
+function iconClick(icon) {
+    var filled = (icon.css('color') === 'rgb(204, 0, 153)');
+//    console.log(icon.css('color'));
+//    console.log(filled);
+    if (filled) {
+        icon.css('color', 'white');
+    } else {
+        icon.css('color', '#c09');
+    }
+}
+
+//function iconLike(icon) {
+//    iconClick(icon); // change color
+//    // TODO: update # likes
+//}
+
+/* For the play audio file icon*/
+function iconClickPlay(icon) {
+    console.log(icon);
+    console.log(icon.getAttribute('name'));
+    var playing = (icon.getAttribute('name') === 'ios-pause');
+    console.log(playing);
+    if (playing) { 
+        icon.setAttribute('name', 'ios-play-circle');
+    } else {
+        icon.setAttribute('name', 'ios-pause')
+    }
+//    icon.style.color = '#4A00E0';
 }
 
 /* --------------------------- UPLOAD --------------------------- */

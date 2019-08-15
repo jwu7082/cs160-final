@@ -1,11 +1,11 @@
-/* ------- COLORS ------- 
+/* ------------- COLORS ------------- 
 PURPLE: #8E2DE2
 BLUE-PURPLE: #4A00E0
 PINK: #fc00ff  (slightly darker #eb00ee, #c0f) 
 ORANGE-PINK: #f64f59
 */
 
-/* --------------------------- BASE --------------------------- */
+/* ------------------------------ BASE ------------------------------ */
 body {
     position: relative;
     margin: 0;
@@ -22,6 +22,7 @@ body {
 }
 
 /* --------------------------- REUSABLE COMPONENTS --------------------------- */
+/* ------------------ HEADER ------------------ */
 .header {
     height: 10rem;
     position: absolute;
@@ -54,6 +55,7 @@ body {
     cursor: pointer;
 }
 
+/* ---------------- INDIVIDUAL SUBMISSIONS ---------------- */
 .submission {
 /*    background-color: red;*/
     height: 100%;
@@ -64,7 +66,9 @@ body {
     position: relative;
 }
 
-.submission-image { /* container for actual img */
+/* div.submission-image is the container for the actual img */
+.submission-image,
+.submission-hover {
     margin-top: 1rem;
     overflow: hidden;
     border-radius: 3px;
@@ -77,10 +81,60 @@ body {
     border-radius: 2px;
 }
 
+
+/* SUBMISSION HOVER */
+.submission-hover {
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .7), rgba(102,51,153, .7));
+    position: absolute;
+    z-index: 10000;
+    height: 20rem;
+    width: 24rem;
+    opacity: 0;
+    border-radius: 2px;
+}
+
+.submission-hover:hover {
+    opacity: 1;
+}
+
+
+.submission-like,
+.submission-bookmark,
+.submission-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.submission-like,
+.submission-bookmark {
+    font-size: 3.75rem;
+}
+
+.submission-bookmark {
+    transform: translate(67%, 150%);
+}
+
+.submission-play {
+    font-size: 7rem;
+    transform: translate(112.5%, 58%);
+}
+
+.submission-like {
+    transform: translate(440%, 150%);
+}
+
+
+/* SUBMISSION INFO */
 .submission-title,
 .submission-user {
     position: absolute;
     margin-left: 1rem;
+/*
+    background-image: linear-gradient(to top right, #4211ff, #8E2DE2 40%);
+    -webkit-background-clip: text;
+    color: transparent;
+*/
 }
 
 .submission-title {
@@ -90,11 +144,11 @@ body {
     margin-bottom: 1.25rem;
 }
 .submission-user {
-    font-size: 2rem;
-    bottom: 1rem;
+    font-size: 2.25rem;
+    bottom: .5rem;
 }
 
-/* ------------------------ INDEX PAGE ------------------------ */
+/* ------------------------------------- INDEX PAGE ----------------------------------- */
 .hero {
     height: 77vh;
     position: relative;
@@ -122,12 +176,13 @@ body {
 [class*="-carousel"] { 
     /* TODO Remove? */
 /*    background-color: rgba(0, 0, 0, .1); */
-    height: 37rem; /* MODIFY TO CHANGE CAROUSEL/CAROUSEL SLIDE HEIGHT */
+    height: 34rem; /* MODIFY TO CHANGE CAROUSEL/CAROUSEL SLIDE HEIGHT */
 }
 
 /* Each individual carousel slide. */
 .item {
     margin-left: 2rem;
+/*    background-color: red;*/
 }
 
 /* Buggy transition - fix? */
@@ -143,6 +198,8 @@ body {
 /*    background-color: red;*/
 }
 
+
+
 /* ============= CAROUSEL ARROWS ============= */
 .carousel-control .icon-prev {
     background-image: url(../images/left-arrow.png);
@@ -155,23 +212,25 @@ body {
     transform: translateX(-500rem);
 }
 #trending-control .icon-prev {
-    transform: translateX(590rem) translateY(-38rem);
+    transform: translateX(590rem) translateY(-32.75rem);
 }
 #trending-control .icon-next {
-    transform: translateX(502.5rem) translateY(-38rem);
+    transform: translateX(502.5rem) translateY(-32.75rem);
 }
 #acoustic-control .icon-prev {
-    transform: translateX(590rem) translateY(10rem);
+    transform: translateX(590rem) translateY(12rem);
 }
 #acoustic-control .icon-next {
-    transform: translateX(502.5rem) translateY(10rem);
+    transform: translateX(502.5rem) translateY(12rem);
 }
 #upbeat-control .icon-prev {
-    transform: translateX(590rem) translateY(57rem);
+    transform: translateX(590rem) translateY(56.75rem);
 }
 #upbeat-control .icon-next {
-    transform: translateX(502.5rem) translateY(57rem);
+    transform: translateX(502.5rem) translateY(56.75rem);
 }
+
+
 
 [class^="collection-"] {
     padding: 1rem 6rem;
@@ -179,6 +238,7 @@ body {
 }
 
 [class^="collection-"] h1 {
+/*    background-color: green;*/
     text-transform: uppercase;
     font-size: 4rem;
     letter-spacing: 1px;
@@ -224,9 +284,7 @@ body {
     font-size: 3rem;
 }
 
-/* ---------------------- USER PROFILE PAGE ---------------------- */
-
-/* ------------------------ UPLOAD ------------------------ */
+/* --------------------------------- UPLOAD --------------------------------- */
 .choose-file {
     position: absolute;
     height: 0.1px;
@@ -287,7 +345,6 @@ label.upload-file::before {
 #form-left {
     padding-left: 25%;
 }
-
 
 .input-name {
     margin-bottom: 1.5rem;
@@ -550,14 +607,6 @@ label.upload-file::before {
     margin-top: 8.8rem;
 }
 
-
-
-
-
-
-
-
-
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
 .old-header {
   display: flex;
@@ -706,7 +755,7 @@ label.upload-file::before {
 
 }
     
-/* ---------------------- USER PROFILE PAGE ---------------------- */
+/* ----------------------------- USER PROFILE PAGE ----------------------------- */
  .snippets-container {
      display: flex;
      flex-wrap: wrap;
@@ -725,7 +774,7 @@ label.upload-file::before {
   padding-left: 30px;
 }
    
-   .sidenav a {
+.sidenav a {
   padding: 6px 8px 10px 16px;
   text-decoration: none;
   font-size: 35px;
