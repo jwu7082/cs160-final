@@ -43,16 +43,18 @@
                    <div class="input-name">
                        Audio File<span>*</span>:<br>
                     </div>
-                   <input class="choose-file required-file" id="choose-file" type="file" accept="audio/*" onchange="uploadMusic(event)" required>
-                   <label for="choose-file" class="upload-file"></label>
+                   <input id="choose-audio" class="choose-file required-file" id="choose-file" type="file" accept="audio/*" onchange="uploadMusic(event)" required>
+                   <label for="choose-audio" class="upload-file"></label>
                </div>
                
                <div class="pdf-upload-container">
                   <div class="input-name">
                       Sheet Music:<br>
                    </div>
-                    <input class="choose-file" id="choose-file" type="file" accept="application/pdf" onchange="uploadSheet(event)">
-                    <label for="choose-file" class="upload-file"></label>
+                   <!-- Not actually required. Submit button works w/o verifying required inputs. 
+                   Need file uploads to be required in order to change button text. -->
+                    <input id="choose-pdf" class="choose-file required-file" id="choose-file" type="file" accept="application/pdf" onchange="uploadSheet(event)" required>
+                    <label for="choose-pdf" class="upload-file"></label>
                </div>
             </form>
            </div>

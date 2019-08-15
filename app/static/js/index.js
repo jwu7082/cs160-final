@@ -62,11 +62,5 @@ function uploadImage(event) {
 };
 
 function uploadMusic(event) {
-//    console.log(event.target.files[0]);
-//    var xhttp = new XMLHttpRequest();
-//    xhttp.open("GET", event.target.files[0], true);
-//    xhttp.send();
-};
 
-function uploadSheet(event) {
 };

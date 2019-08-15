@@ -130,13 +130,19 @@ body {
 /* SUBMISSION INFO */
 .submission-title,
 .submission-user {
+    cursor: pointer;
     position: absolute;
-    margin-left: 1rem;
+    margin-left: 1rem;  
     /*
     background-image: linear-gradient(to top right, #4211ff, #8E2DE2 40%);
     -webkit-background-clip: text;
     color: transparent;
 */
+}
+
+.submission-user {
+    font-size: 2.25rem;
+    bottom: .5rem;
 }
 
 .submission-title {
@@ -146,9 +152,11 @@ body {
     margin-bottom: 1.25rem;
 }
 
-.submission-user {
-    font-size: 2.25rem;
-    bottom: .5rem;
+.submission-title:hover,
+.submission-user:hover {
+/*    border-bottom: 2px solid white;*/
+/*    https://www.0to255.com/8e2de2*/
+    color: #6217a4; 
 }
 
 /* ------------------------------------- INDEX PAGE ----------------------------------- */
