@@ -943,5 +943,52 @@ label.upload-file::before {
 }
 
 
+/* ----------------------------- SEARCH PAGE ----------------------------- */
+.grid-container {
+    display: grid;
+    grid-column-gap: 3rem;
+    grid-template-columns: 24rem 110rem;
+}
+
+.side-bar, .main {
+    margin-top: 25rem;
+}
+
+.side-bar {
+    grid-column-start: 1;
+    grid-column-end: 2;
+/*    background-color: green;*/
+    height: 140rem;
+}
+
+.filters {
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 5rem;
+}
+
+/*
+.main {
+    background-color: green;
+}
+*/
+
+.border-left {
+    border-left: 2px solid #eee;
+    position: absolute;
+    top: 25rem;
+    bottom: 14rem;
+    bottom: 10rem;
+}
+
+.search-content {
+/*    background-color: red;*/
+    margin-left: 5rem;
+}
+
+.search-item {
+    margin: 1.5rem 5.5rem;
+}
+
 
 /* ----------------------------- USER PROFILE PAGE ----------------------------- */
