@@ -83,19 +83,19 @@ function selectInspiration(inspiration) {
         console.log(inspiration.attr('id'));
         switch(inspiration.attr('id')) {
             case 'inspiration-1':
-                $(".diff-1").css('opacity', '1');
-                $(".diff-2").css('opacity', '0');
-                $(".diff-3").css('opacity', '0');
+                $(".similar-1").css('opacity', '1');
+                $(".similar-2").css('opacity', '0');
+                $(".similar-3").css('opacity', '0');
                 break;
             case 'inspiration-2':
-                $(".diff-1").css('opacity', '0');
-                $(".diff-2").css('opacity', '1');
-                $(".diff-3").css('opacity', '0');
+                $(".similar-1").css('opacity', '0');
+                $(".similar-2").css('opacity', '1');
+                $(".similar-3").css('opacity', '0');
                 break;
             case 'inspiration-3':
-                $(".diff-1").css('opacity', '0');
-                $(".diff-2").css('opacity', '0');
-                $(".diff-3").css('opacity', '1');
+                $(".similar-1").css('opacity', '0');
+                $(".similar-2").css('opacity', '0');
+                $(".similar-3").css('opacity', '1');
                 break;
         }
     } else {
