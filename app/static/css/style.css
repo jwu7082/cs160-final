@@ -967,6 +967,7 @@ label.upload-file::before {
     position: -webkit-sticky;
     position: sticky;
     top: 5rem;
+    margin-left: 3.3rem;
 }
 
 /*
@@ -1039,5 +1040,23 @@ label.upload-file::before {
     transform: translate(5rem, -1.5rem);
 }
 
+.filters h1 {
+    font-size: 3rem;
+}
+
+.filters h2 {
+    font-size: 2rem;
+}
+
+.filters h3 {
+    font-size: 1.5rem;
+}
+
+.filters label {
+    display: inline-block;
+    font-size: 1.75rem;
+    font-weight: 400;
+    margin-left: 4px;
+}
 
 /* ----------------------------- USER PROFILE PAGE ----------------------------- */
