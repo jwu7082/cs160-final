@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
@@ -14,87 +15,87 @@
 </head>
 
 <body>
-   <div class="header">
+    <div class="header">
         <img id="upload-icon" src="{% static 'images/icons/upload.png' %}" alt="" onclick="window.location.href = '/upload'" alt="upload icon">
         <img id="profile-icon" src="{% static 'images/icons/profile.png' %}" alt="" onclick="window.location.href = '/profile'" alt="profile icon">
         <img id="logo-icon" src="{% static 'images/icons/logo-music.png' %}" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length)" alt="logo">
-   </div>
-   
-    <div class="upload-form container-fluid">
-       <div class="row">
-           <div class="col left">
-            <form id="form-left" action="">
-               <div class="photo-upload-container">
-                  <div class="input-name">
-                      Cover Photo<span>*</span>:<br>
-                  </div>
-                  <div class="photo-upload-preview">
-                      <input type="file" class="image-input choose-file required-file" id="choose-file" accept="image/*" onchange="uploadImage(event)" required>
-                      <label for="choose-file" class="upload-file"></label>
-                      <br>
-                      <div class="preview-container">
-                          <img id="preview"/>
-                          <div class="preview-text">Preview</div>
-                      </div>
-                  </div>
-               </div>
-
-               <div class="audio-upload-container">
-                   <div class="input-name">
-                       Audio File<span>*</span>:<br>
-                    </div>
-                   <input id="choose-audio" class="choose-file required-file" id="choose-file" type="file" accept="audio/*" onchange="uploadMusic(event)" required>
-                   <label for="choose-audio" class="upload-file"></label>
-               </div>
-               
-               <div class="pdf-upload-container">
-                  <div class="input-name">
-                      Sheet Music:<br>
-                   </div>
-                   <!-- Not actually required. Submit button works w/o verifying required inputs. 
-                   Need file uploads to be required in order to change button text. -->
-                    <input id="choose-pdf" class="choose-file required-file" id="choose-file" type="file" accept="application/pdf" onchange="uploadSheet(event)" required>
-                    <label for="choose-pdf" class="upload-file"></label>
-               </div>
-            </form>
-           </div>
-           
-           <div class="col right">
-               <form id="form-right" class="col" action="">
-                   <input type="text" class="text-entry" name="submission-name" placeholder="Enter Submission Name"><br>
-                   
-                   <div class="inspirations-box">
-                       <button type="button" class="right-button" id="inspired-button" onclick="openPopup()">Inspired by:</button>
-                       <!-- TODO: Style submissions. Add name of submission. Light purple? -->
-                   </div>
-                   <div class="instruments-box">
-                       <button type="button" class="right-button">Instrument(s):</button>
-                       <!-- TODO: Create drop-down. -->
-                   </div>
-                   
-                   <div class="genres-box">
-                       <button type="button" class="right-button">Genres:</button>
-                       <!-- TODO: Hardcode genre when audio file is uploaded. -->
-                       <!-- Type: + --> 
-                   </div>
-                   
-                   <div class="tags-box">
-                       <button type="button" class="right-button">Tags:</button>
-                       <!-- TODO: Hardcode tags when audio file is uploaded. e.g. mood, tempo, etc -->
-                       <!-- Type: + --> 
-                   </div>
-               </form>
-           </div>
-       </div>
-<!--       <input id="upload-button" type="submit" value="upload" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/success')">-->
-       <input id="upload-button" type="submit" value="upload" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length)">
     </div>
-    
+
+    <div class="upload-form container-fluid">
+        <div class="row">
+            <div class="col left">
+                <form id="form-left" action="">
+                    <div class="photo-upload-container">
+                        <div class="input-name">
+                            Cover Photo<span>*</span>:<br>
+                        </div>
+                        <div class="photo-upload-preview">
+                            <input type="file" class="image-input choose-file required-file" id="choose-file" accept="image/*" onchange="uploadImage(event)" required>
+                            <label for="choose-file" class="upload-file"></label>
+                            <br>
+                            <div class="preview-container">
+                                <img id="preview" />
+                                <div class="preview-text">Preview</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="audio-upload-container">
+                        <div class="input-name">
+                            Audio File<span>*</span>:<br>
+                        </div>
+                        <input id="choose-audio" class="choose-file required-file" id="choose-file" type="file" accept="audio/*" onchange="uploadMusic(event)" required>
+                        <label for="choose-audio" class="upload-file"></label>
+                    </div>
+
+                    <div class="pdf-upload-container">
+                        <div class="input-name">
+                            Sheet Music:<br>
+                        </div>
+                        <!-- Not actually required. Submit button works w/o verifying required inputs. 
+                   Need file uploads to be required in order to change button text. -->
+                        <input id="choose-pdf" class="choose-file required-file" id="choose-file" type="file" accept="application/pdf" onchange="uploadSheet(event)" required>
+                        <label for="choose-pdf" class="upload-file"></label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col right">
+                <form id="form-right" class="col" action="">
+                    <input type="text" class="text-entry" name="submission-name" placeholder="Enter Submission Name"><br>
+
+                    <div class="inspirations-box">
+                        <button type="button" class="right-button" id="inspired-button" onclick="openPopup()">Inspired by:</button>
+                        <!-- TODO: Style submissions. Add name of submission. Light purple? -->
+                    </div>
+                    <div class="instruments-box">
+                        <button type="button" class="right-button">Instrument(s):</button>
+                        <!-- TODO: Create drop-down. -->
+                    </div>
+
+                    <div class="genres-box">
+                        <button type="button" class="right-button">Genres:</button>
+                        <!-- TODO: Hardcode genre when audio file is uploaded. -->
+                        <!-- Type: + -->
+                    </div>
+
+                    <div class="tags-box">
+                        <button type="button" class="right-button">Tags:</button>
+                        <!-- TODO: Hardcode tags when audio file is uploaded. e.g. mood, tempo, etc -->
+                        <!-- Type: + -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!--       <input id="upload-button" type="submit" value="upload" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/success')">-->
+        <input id="upload-button" type="submit" value="upload" onclick="window.location = window.location.href.slice(0, window.location.href.length - window.location.pathname.length).concat('/submission')">
+    </div>
+
     <div id="popup-bookmarks">
         <ion-icon name="close" class="popup-close" onclick="closePopup()"></ion-icon>
         <div class="popup-header">
             <h1>My Bookmarks</h1>
-              </div>
+        </div>
         <div class="bookmark-container">
             <div class="bookmarks grid-container">
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
@@ -102,31 +103,31 @@
                         <img src="{% static 'images/covers/relaxing/4.jpeg' %}" alt="">
                     </div>
                     <div class="bookmark-title">Acoustic</div>
-                    <div class="bookmark-user">jwuice</div>  
+                    <div class="bookmark-user">jwuice</div>
                 </div>
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
                     <div class="bookmark-image">
                         <img src="{% static 'images/covers/upbeat/5.jpeg' %}" alt="">
                     </div>
                     <div class="bookmark-title">Upbeat/Pop</div>
-                    <div class="bookmark-user">archtek7</div>  
+                    <div class="bookmark-user">archtek7</div>
                 </div>
-                
+
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
                     <div class="bookmark-image">
                         <img src="{% static 'images/covers/acoustic/5.jpeg' %}" alt="">
                     </div>
                     <div class="bookmark-title">Jazz Sax</div>
-                    <div class="bookmark-user">procrastolotl</div>  
+                    <div class="bookmark-user">procrastolotl</div>
                 </div>
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
                     <div class="bookmark-image">
                         <img src="{% static 'images/covers/trending/3.jpg' %}" alt="">
                     </div>
                     <div class="bookmark-title">Submission 1</div>
-                    <div class="bookmark-user">yuna.k</div>                 
+                    <div class="bookmark-user">yuna.k</div>
                 </div>
-                
+
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
                     <div class="bookmark-image">
                         <img src="{% static 'images/covers/upbeat/6.jpeg' %}" alt="">
@@ -139,7 +140,7 @@
                         <img src="{% static 'images/covers/trending/4.png' %}" alt="">
                     </div>
                     <div class="bookmark-title">urban beats</div>
-                    <div class="bookmark-user">finessor</div>                 
+                    <div class="bookmark-user">finessor</div>
                 </div>
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
                     <div class="bookmark-image">
@@ -148,7 +149,7 @@
                     <div class="bookmark-title">Title</div>
                     <div class="bookmark-user">cdice</div>
                 </div>
-     
+
                 <div class="bookmark grid-item" onclick="selectSource($(this))">
                     <div class="bookmark-image">
                         <img src="{% static 'images/covers/trending/0.jpeg' %}" alt="">
@@ -176,4 +177,5 @@
     </div>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
+
 </html>
