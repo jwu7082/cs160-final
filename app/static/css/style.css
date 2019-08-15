@@ -29,23 +29,24 @@ body {
     width: 100%;
     z-index: 99;
     margin-top: 1rem;
-/*    background-color: green;*/
+    /*    background-color: green;*/
 }
 
 /* Logo on header bar (except the header bar on the home page) */
 #logo-icon {
     position: absolute;
-    transform: scale(.4) translate(-248rem, -216rem); /* for logo w/o music note */
+    transform: scale(.4) translate(-248rem, -216rem);
+    /* for logo w/o music note */
     transform: scale(.5) translate(-168rem, -159rem);
 }
 
 #upload-icon {
-/*    transform: scale(.1) translate(550rem, -310rem);*/
+    /*    transform: scale(.1) translate(550rem, -310rem);*/
     transform: scale(.085) translate(685rem, -348rem);
 }
 
 #profile-icon {
-/*    transform: scale(.225) translate(445rem, -377rem);*/
+    /*    transform: scale(.225) translate(445rem, -377rem);*/
     transform: scale(.2) translate(505rem, -419rem);
 }
 
@@ -57,7 +58,7 @@ body {
 
 /* ---------------- INDIVIDUAL SUBMISSIONS ---------------- */
 .submission {
-/*    background-color: red;*/
+    /*    background-color: red;*/
     height: 100%;
     display: inline-block;
     height: 30rem;
@@ -73,6 +74,7 @@ body {
     overflow: hidden;
     border-radius: 3px;
 }
+
 .submission-image img {
     position: absolute;
     object-fit: cover;
@@ -84,7 +86,7 @@ body {
 
 /* SUBMISSION HOVER */
 .submission-hover {
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .7), rgba(102,51,153, .7));
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .7), rgba(102, 51, 153, .7));
     position: absolute;
     z-index: 10000;
     height: 20rem;
@@ -130,7 +132,7 @@ body {
 .submission-user {
     position: absolute;
     margin-left: 1rem;
-/*
+    /*
     background-image: linear-gradient(to top right, #4211ff, #8E2DE2 40%);
     -webkit-background-clip: text;
     color: transparent;
@@ -143,6 +145,7 @@ body {
     letter-spacing: 1px;
     margin-bottom: 1.25rem;
 }
+
 .submission-user {
     font-size: 2.25rem;
     bottom: .5rem;
@@ -156,14 +159,16 @@ body {
 }
 
 #logo {
-/*    background-color: red;*/
-    position: absolute; 
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
+    /*    background-color: red;*/
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
     margin-right: auto;
-    transform: scale(.75) translate(-4%, 3%); /* Logo image not centered. */
-    transform: scale(1.1) translate(-10%, 35%); /* for logo-music instead of logo */
+    transform: scale(.75) translate(-4%, 3%);
+    /* Logo image not centered. */
+    transform: scale(1.1) translate(-10%, 35%);
+    /* for logo-music instead of logo */
 }
 
 .section-recommended {
@@ -173,16 +178,17 @@ body {
 
 /* Individual carousel. To modify individual carousel slides, see .item */
 /* [class$="-carousel"] doesn't work? */
-[class*="-carousel"] { 
+[class*="-carousel"] {
     /* TODO Remove? */
-/*    background-color: rgba(0, 0, 0, .1); */
-    height: 34rem; /* MODIFY TO CHANGE CAROUSEL/CAROUSEL SLIDE HEIGHT */
+    /*    background-color: rgba(0, 0, 0, .1); */
+    height: 34rem;
+    /* MODIFY TO CHANGE CAROUSEL/CAROUSEL SLIDE HEIGHT */
 }
 
 /* Each individual carousel slide. */
 .item {
     margin-left: 2rem;
-/*    background-color: red;*/
+    /*    background-color: red;*/
 }
 
 /* Buggy transition - fix? */
@@ -191,11 +197,11 @@ body {
     max-height: 300px !important;
 }
 
-.carousel-control .icon-prev, 
+.carousel-control .icon-prev,
 .carousel-control .icon-next {
     font-size: 0;
     z-index: 999;
-/*    background-color: red;*/
+    /*    background-color: red;*/
 }
 
 
@@ -204,28 +210,36 @@ body {
 .carousel-control .icon-prev {
     background-image: url(../images/left-arrow.png);
 }
+
 .carousel-control .icon-next {
     background-image: url(../images/right-arrow.png);
 }
+
 .carousel-control {
-/*    background-color: blue;*/
+    /*    background-color: blue;*/
     transform: translateX(-500rem);
 }
+
 #trending-control .icon-prev {
     transform: translateX(590rem) translateY(-32.75rem);
 }
+
 #trending-control .icon-next {
     transform: translateX(502.5rem) translateY(-32.75rem);
 }
+
 #acoustic-control .icon-prev {
     transform: translateX(590rem) translateY(12rem);
 }
+
 #acoustic-control .icon-next {
     transform: translateX(502.5rem) translateY(12rem);
 }
+
 #upbeat-control .icon-prev {
     transform: translateX(590rem) translateY(56.75rem);
 }
+
 #upbeat-control .icon-next {
     transform: translateX(502.5rem) translateY(56.75rem);
 }
@@ -234,11 +248,12 @@ body {
 
 [class^="collection-"] {
     padding: 1rem 6rem;
-    padding-bottom: 0; /* TODO */
+    padding-bottom: 0;
+    /* TODO */
 }
 
 [class^="collection-"] h1 {
-/*    background-color: green;*/
+    /*    background-color: green;*/
     text-transform: uppercase;
     font-size: 4rem;
     letter-spacing: 1px;
@@ -252,20 +267,20 @@ body {
     padding: 1.5rem;
     padding-left: 8rem;
     padding-top: 4rem;
-    
+
     background-color: transparent;
     font-family: inherit;
     font-weight: 300;
     letter-spacing: 1px;
-/*    color: #f7f7f7;*/
+    /*    color: #f7f7f7;*/
     color: #eee;
 
     font-size: 3rem;
     position: absolute;
     top: 35rem;
     left: 41rem;
-    border-bottom: 3px solid #4A00E0; 
-/*    border-bottom: 3px solid #eee; */
+    border-bottom: 3px solid #4A00E0;
+    /*    border-bottom: 3px solid #eee; */
 }
 
 #search-icon {
@@ -303,8 +318,8 @@ body {
     display: block;
     padding: 1.5rem 0;
     width: 40rem;
-/*    background-color: #3d3d3d;*/
-    background-color:  #2c2c2c;
+    /*    background-color: #3d3d3d;*/
+    background-color: #2c2c2c;
     color: #eee;
 }
 
@@ -334,7 +349,8 @@ label.upload-file::before {
     height: 1200px;
     padding: 10rem;
     color: white;
-    padding-top: 18rem; /* To make room for header */
+    padding-top: 18rem;
+    /* To make room for header */
 }
 
 .left {
@@ -498,13 +514,13 @@ label.upload-file::before {
 }
 
 .popup-header h1 {
-/*    color: white;*/
+    /*    color: white;*/
     font-size: 4.5rem;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 2px;
     padding: 1rem 5rem;
-    
+
     color: #eee;
 }
 
@@ -525,7 +541,7 @@ label.upload-file::before {
     overflow-y: scroll;
     display: grid;
     grid-template-columns: 24rem 24rem 24rem 24rem;
-/*     grid-template-columns: auto auto auto auto;*/
+    /*     grid-template-columns: auto auto auto auto;*/
     margin-left: 10px;
 }
 
@@ -567,14 +583,14 @@ label.upload-file::before {
 
 .right-button {
     cursor: pointer;
-    
+
     box-sizing: border-box;
     display: block;
     margin-top: 4rem;
     margin-left: 1rem;
     width: 20rem;
     padding: 1.5rem 0;
-    
+
     font-size: 2rem;
     font-weight: 300;
     text-align: center;
@@ -583,10 +599,10 @@ label.upload-file::before {
     font-weight: 500;
 
     border-radius: 3px;
-/*    border: 1px solid white;*/
-/*    background-color:  #3d3d3d;*/
-    
-    background-color:  #2c2c2c;
+    /*    border: 1px solid white;*/
+    /*    background-color:  #3d3d3d;*/
+
+    background-color: #2c2c2c;
     color: #eee;
     border: 1px solid #eee;
 
@@ -608,207 +624,251 @@ label.upload-file::before {
 }
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
-.old-header {
-  display: flex;
-  width: 100%;
-  height: 150px;
+.upload {
+    margin-top: 40px;
+    margin-left: 1150px;
 }
 
-.upload {
-      margin-top: 40px;
-      margin-left: 1150px;
+.upload img {
+    width: 120px;
+    height: 90px;
+    padding: 5px;
 }
- .upload img{
-      width: 120px;
-      height: 90px;
-      padding:5px;
-    }
+
 .upload img:hover {
-  padding: 3px;
+    padding: 3px;
 }
+
 .profile {
-  margin-left: 5px;
-  margin-top: 40px; 
+    margin-left: 5px;
+    margin-top: 40px;
 }
+
 .profile img {
-      width: 120px;
-      height: 90px;
-      padding: 5px;
-    }
+    width: 120px;
+    height: 90px;
+    padding: 5px;
+}
+
 .profile img:hover {
-  padding: 3px;
+    padding: 3px;
 }
 
 .logoSubmission {
-  position: absolute;
-  top: 5px;
-  left: -40px;
+    position: absolute;
+    top: 5px;
+    left: -40px;
 }
+
 .logoSubmission img {
-  width: 650px;
-  height: 200px;
-  padding-right: 150px;
-  
+    width: 650px;
+    height: 200px;
+    padding-right: 150px;
+
 }
 
 
 .box {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
 
 }
+
 .music-information {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-/*       overflow-y:scroll; */
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    /*       overflow-y:scroll; */
 }
+
 .music-imag {
-  padding: 40px 40px 30px 60px;
+    padding: 20px 40px 10px 90px;
 }
+
 .music-imag img {
-  padding-left: 40px;
+    padding-left: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
 }
+
 .music-imag img:hover {
-  transform: scale(1.03);
+    transform: scale(1.03);
     width: 100%;
     opacity: .6;
 }
 
 .vl {
-  border-left: 4px solid white;
-  height: 1080px;
-  width: 5px;
+    border-left: 4px solid white;
+    height: 1500px;
+    width: 5px;
 }
+
 .music-detail {
-  padding-top: 40px;
+    padding-top: 20px;
 }
+
 #music-name {
-  font-size: 40px;
-  color: white;
+    font-size: 40px;
+    color: white;
 }
+
 #author-name {
-  font-size: 25px;
-  color: white;
+    font-size: 25px;
+    color: white;
 }
+
 #hear-bookmark {
-  padding-left: 10px;
-  font-size: 20px;
+    padding-left: 10px;
+    font-size: 20px;
 }
+
 .sheet-music {
-  padding: 0px 30px 10px 50px;
+    padding: 0px 30px 20px 50px;
+    margin-bottom: 30px;
 }
+
 #musicsheet {
-  width: 100%;
-  padding-left:50px;
+    width: 100%;
+    padding-left: 50px;
 }
 
-.inspiration {
-  width: 28%;
-  height: 500px;
-}
 .inspired-by-text {
-  padding: 30px 10px 10px 14px;
-  font-size: 30px;
-  color: white;
-}
-.inspired-by {
-  margin-left: 20px;
-  padding: 10px 10px 10px 20px;
-  border-radius: 15px;
-}
-.inspired-by:hover {
-  transform: scale(1.03);
-  padding: 10px 10px 10px 20px;
-  opacity: .6;
+    padding: 0px 10px 10px 30px;
+    font-size: 30px;
+    color: white;
 }
 
-.inspired-by-info {
-  border-top: 10px;
-  border-bottom: 3px solid white;
-  margin: 0 10px;
-  padding-bottom: 20px;
+.inspired-by {
+    margin-left: 25px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 15px;
+}
+
+.inspired-by:hover {
+    transform: scale(1.03);
+    margin: 8px 8px 8px 8px;
+    opacity: .6;
+}
+
+.inspired-by-submission {
+    padding: 0px 0px 5px 40px;
+}
+
+.inner-inspired-by {
+    display: flex;
+}
+
+.info {
+    margin: 0 10px;
+    padding-bottom: 20px;
 }
 
 .inspired-name {
-  font-size: 30px;
-  color: white;
+    font-size: 30px;
+    color: white;
 }
+
 .inspired-author {
-  font-size: 18px;
-  color: white;
+    font-size: 18px;
+    color: white;
+    margin-left: 10px;
 }
+
 .inspired-bookmark {
-  padding-left: 40px;
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
 }
+
 .numbers {
-  margin-left: 5px;
-  padding-right: 40px;
-  color: white;
+    margin-left: 5px;
+    padding-right: 40px;
+    color: white;
 }
-.heart {
-  font-size: 25px;
+
+.heart ion-icon {
+    font-size: 25px;
 
 }
-    
-/* ----------------------------- USER PROFILE PAGE ----------------------------- */
- .snippets-container {
-     display: flex;
-     flex-wrap: wrap;
-     margin-bottom: 200px;
-     height: 100%;
-   }
- .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 30%; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 150px; /* Stay at the top */
-  left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 80px;
-  padding-left: 30px;
+
+
+/* ---------------------- USER PROFILE PAGE ---------------------- */
+.snippets-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 200px;
+    height: 100%;
 }
-   
+
+.sidenav {
+    height: 100%;
+    /* Full-height: remove this if you want "auto" height */
+    width: 18%;
+    /* Set the width of the sidebar */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 150px;
+    /* Stay at the top */
+    left: 0;
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
 .sidenav a {
-  padding: 6px 8px 10px 16px;
-  text-decoration: none;
-  font-size: 35px;
-  color: #D3D3D3;
-  display: block;
+    padding: 6px 8px 10px 16px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #D3D3D3;
+    display: block;
 }
-   
+
 .sidenav a:hover {
-  color: #f1f1f1;
+    color: #f1f1f1;
 }
-   
-   .snippets-box {
-     height: 100%;
-     width: 70%;
-     background-color: white;
-   }
-   
-  .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 130px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+
+.snippets-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 85%;
+    margin-left: 250px;
 }
-   
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 130px;
+    min-height: 50px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
 .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    border-radius: 5px;
 }
- .dropdown-content a:hover {
-   background-color: #ddd;
-   }
- .dropdown:hover .dropdown-content {display: block;}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* ----------------------------- USER PROFILE PAGE ----------------------------- */

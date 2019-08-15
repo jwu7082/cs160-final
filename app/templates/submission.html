@@ -1,5 +1,5 @@
-<!DOCTYPE html>
 {% load staticfiles %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,22 +15,153 @@
   body {
   background-image: linear-gradient(to bottom right, #c09, #8E2DE2 35%, #4A00E0 80%);
 }
+    
+    .current-music {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    .tags {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      padding-left: 5px;
+    }
+    .oval-guitar {
+      margin-top: 5px;
+      padding-left: 8px;
+      padding-bottom: 10px;
+      width: 100px;
+      height: 40px;
+      background-color: #CC99FF;
+      border-radius: 10px;
+      font-size: 30px;
+      color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+     .oval-contemporary {
+      margin-top: 5px;
+      padding-left: 8px;
+      width: 210px;
+      height: 40px;
+      background-color: #CC99FF;
+      border-radius: 10px;
+      font-size: 30px;
+      color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+     .oval-bpm {
+      margin-top: 5px;
+      padding-left: 5px;
+      padding-top: 3px;
+      width: 100px;
+      height: 40px;
+      background-color: #CC99FF;
+      border-radius: 10px;
+      font-size: 26px;
+      color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .tag-oval {
+      margin-bottom: 5px;
+      color: white;
+      font-size: 30px;
+    }
+    .single-tag {
+      margin: 10px 5px 80px 90px;
+    }
+    .outer-oval {
+      margin: 10px 5px 80px 3px;
+    }
+   
+    /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: flex; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 1000;
+  top: 400;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto;  /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  overflow-y: scroll; 
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+    .popup-sheet {
+      padding: 15px 15px 15px 15px;
+    }
+    .popup-sheet img {
+      width: 1080px;
+    }
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+    
+
+    .inspired-name {
+      background-color: transparent;
+      border: none;
+      text-align: left;
+      text-shadow: 2px 2px 8px #000000;
+    }
+    
+    .about-music {
+      width:24%;
+      height: 1500px;
+    }
+    .listof-info {
+      padding-left: 25px;
+    }
+    .text-info {
+      font-size: 20px;
+      color: white;
+      padding: 0px;
+    }
+    .about-user {
+      color: white;
+      font-size: 30px;
+      padding-left: 35px;
+      padding-bottom: 10px;
+    }
+  
   </style>
 <body>
    <!-- Use <div class="submission"></div> as a placeholder for music submissions. -->
-    <div class="old-header">
+    <div class="header">
         <div class="logoSubmission">
-          <a href="http://cs160-final-panpanxu714595.codeanyapp.com/"> 
+          <a href="../"> 
           <img src= "{%static 'images/Logo_w__music_note.png'%}" alt="logo">
           </a>
         </div>
         <div class="upload">
-          <a href="http://cs160-final-panpanxu714595.codeanyapp.com/upload">
+          <a href="../upload">
            <img src= "{%static 'images/Upload_Icon.png'%}" alt="upload">
           </a>
         </div>
          <div class="profile dropdown">
-          <a href="http://cs160-final-panpanxu714595.codeanyapp.com/profile">
+          <a href="../profile">
           <img src= "{%static 'images/Profile_icon.png'%}" alt="profile">
           </a>
           <div class="dropdown-content">
@@ -39,8 +170,9 @@
         </div>
   </div>
       <div class="box">
-      <div class="music-information"> 
-        <div class="music-imag">
+      <div class="music-information">
+        <div class="current-music">
+           <div class="music-imag">
           <img src= "{%static 'images/download.png'%}" alt="music">
         </div>
         <div class="music-detail">
@@ -48,82 +180,159 @@
             <div id="music-name"><li>MODDY GUITAR</li></div>
             <div id="author-name"><li>MODDY GUITAR</li></div>
           </ul>
-             <div class="inspired-bookmark">
-              <div class="heart">
-                <ion-icon name="heart"></ion-icon> 
+            
+        </div>
+        </div>
+    
+        <div class="tags">
+           <div class="single-tag">
+              <div class="tag-oval">
+              Tags:
               </div>
-              <div class="numbers">
-                <p>30</p>
+          </div>
+            <div class="outer-oval">
+              <div class="oval-guitar">
+              Guitar
               </div>
-              <div class="heart">
-                <ion-icon name="bookmark"></ion-icon>
+          </div>
+          <div class="outer-oval">
+              <div class="oval-contemporary">
+              Contemporary
               </div>
-              <div class="numbers">
-                <p>30</p>
+          </div>
+           <div class="outer-oval">
+              <div class="oval-bpm">
+              50 BPM
               </div>
-              </div> 
+          </div>
+        </div>
+        
+        <div class="inspired-by-submission">
+             <div class="inspired-by-text"><p>Inspired by: </p></div>
+         
+          <div class="inner-inspired-by"> 
+           <div class="info">
+          <div>
+          <img class="inspired-by" src= "{%static 'images/download.png'%}" alt="music">
+        </div>
+          <ul style="list-style-type:none;">
+            <button class="inspired-name" id="myBtn"><li>MODDY GUITAR</li></button>
+            <div class="inspired-author"><li>MODDY GUITAR</li></div>
+           </ul>
+        </div>
           
+           <div class="info">
+          <div>
+          <img class="inspired-by" src= "{%static 'images/download.png'%}" alt="music">
+        </div>
+          <ul style="list-style-type:none;">
+            <button class="inspired-name" id="myBtn"><li>MODDY GUITAR</li></button>
+            <div class="inspired-author"><li>MODDY GUITAR</li></div>
+           </ul>
+        </div>
+            
+             <div class="info">
+          <div>
+          <img class="inspired-by" src= "{%static 'images/download.png'%}" alt="music">
+        </div>
+          <ul style="list-style-type:none;">
+            <button  class="inspired-name" id="myBtn"><li>MODDY GUITAR</li></button>
+            <div class="inspired-author"><li>MODDY GUITAR</li></div>
+           </ul>
+        </div>
+          </div>
+  
         </div>
          <div class="sheet-music">
           <img id="musicsheet" src= "{%static 'images/musicsheet1.png'%}" alt="music">
         </div>
-        
-    </div>
-        <div class="vl"></div>
-      <div class="inspiration">
-        <div class="inspired-by-text"><p>Inspired by: </p></div>
-        <div>
-          <img class="inspired-by" src= "{%static 'images/download.png'%}" alt="music">
-        </div>
-        <div class="inspired-by-info">
-          <ul style="list-style-type:none;">
-            <div class="inspired-name"><li>MODDY GUITAR</li></div>
-            <div class="inspired-author"><li>MODDY GUITAR</li></div>
-           </ul>
-            <div class="inspired-bookmark">
-              <div class="heart">
-                <ion-icon name="heart"></ion-icon> 
-              </div>
-              <div class="numbers">
-                <p>30</p>
-              </div>
-              <div class="heart">
-                <ion-icon name="bookmark"></ion-icon>
-              </div>
-              <div class="numbers">
-                <p>30</p>
-              </div>
-              </div> 
-        </div>
+         <div class="inspired-by-submission">
          <div class="inspired-by-text"><p>Inspired: </p></div>
-        <div>
+           <div class="inner-inspired-by">
+             <div class="info">
+             <div>
           <img class="inspired-by" src= "{%static 'images/download.png'%}" alt="music">
         </div>
         <div class="inspired-info">
           <ul style="list-style-type:none;">
-            <div class="inspired-name"><li>MODDY GUITAR</li></div>
+            <button  class="inspired-name" id="myBtn"><li>MODDY GUITAR</li></button>
             <div class="inspired-author"><li>MODDY GUITAR</li></div>
           </ul>
-            <div class="inspired-bookmark">
-              <div class="heart">
-                <ion-icon name="heart"></ion-icon> 
-              </div>
-              <div class="numbers">
-                <p>30</p>
-              </div>
-              <div class="heart">
-                <ion-icon name="bookmark"></ion-icon>
-              </div>
-              <div class="numbers">
-                <p>30</p>
-              </div>
-              </div> 
           
         </div>
+           </div>
+             
+                  <div class="info">
+             <div>
+          <img class="inspired-by" src= "{%static 'images/download.png'%}" alt="music">
+        </div>
+        <div class="inspired-info">
+          <ul style="list-style-type:none;">
+            <button class="inspired-name" id="myBtn"><li>MODDY GUITAR</li></button>
+            <div class="inspired-author"><li>MODDY GUITAR</li></div>
+          </ul>
+          
+        </div>
+           </div>
+           </div>
       </div>
       </div>
-      
-    
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+        <div class="vl"></div>
+      <div class="about-music">
+        <div class="about-user">
+          User: Suzy
+        </div>
+        <div class="listof-info">
+          <ul style="list-style-type:disc;">
+          <div class="text-info"><li>Length: 56 seconds</li></div>
+          <div class="text-info"><li>BPM: 56</li></div>
+          <div class="text-info"><li>Key: D Major</li></div>
+          <div class="text-info"><li>Instrument(s): Piano</li></div>
+          <div class="text-info"><li>Similarity: 7%</li></div>
+          <div class="text-info"><li>Genre: Uncategorized</li></div>
+          <div class="text-info"><li>Mood: Happy</li></div>
+        </ul>
+        </div>
+        </div>
+    </div>
+  
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+    <span class="close">&times;</span>
+      <div class="popup-sheet">
+          <img src= "{%static 'images/musicsheet1.png'%}" alt="music">
+      </div>
+    </div>
+  </div>
+     
+     
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks on the button, open the modal 
+      btn.onclick = function() {
+      modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+      modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 </body>
 </html>
