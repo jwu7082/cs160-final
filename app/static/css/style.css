@@ -658,12 +658,11 @@ label.upload-file::before {
 }
 
 /* TODO */
-[class^="diff-"] {
+[class^="similar-"] {
     position: absolute;
-/*    opacity: 0;*/
+    opacity: 0;
 }
 
-.diff, 
 .similar {
     height: 11.75rem;
     z-index: 100;
@@ -671,23 +670,23 @@ label.upload-file::before {
     position: absolute;
     top: 0;
     left: 0;
+    background-image: linear-gradient(rgba(60, 255, 115, .3), rgba(60, 255, 115, .3));
 }
 
-.similar{
-    /* #e6ffed */
-    background-image: linear-gradient(rgba(230, 255, 237, .8), rgba(230, 255, 237, .8));
+#s1 {
+    transform: translate(30.5rem, -39rem);
+    width: 40rem;
 }
 
-.diff {
-    /* #ff7787 */
-    background-image: linear-gradient(rgba(255, 119, 135, .7), rgba(255, 119, 135, .7));
+#s2 {
+    transform: translate(28.5rem, -17.25rem);
+    height: 10.75rem;
+    width: 18.5rem;
 }
 
-#d1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(41.5rem, -39rem);
+#s3 {
+    transform: translate(70.5rem, -39rem);
+    width: 16.75rem;
 }
 
 /* --------------- INDIVIDUAL MUSIC SUBMISSION PAGE --------------- */
