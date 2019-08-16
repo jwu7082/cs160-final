@@ -21,15 +21,15 @@
     </div>
     <div class="hero">
         <img id="logo" src="{% static 'images/icons/logo-music.png' %}" alt="logo">
-        <input id="home-searchbar" type="text" placeholder="Explore user submissions">
+        <input id="home-searchbar" type="text" placeholder="Explore music snippets">
         <ion-icon id="search-icon" name="ios-search"></ion-icon>
         <script>
             /* Detect enter key on search bar input field */
             const search = document.getElementById("home-searchbar");
             search.addEventListener("keyup", function(event) {
-//     var text = document.getElementById("home-searchbar").value;
+                //     var text = document.getElementById("home-searchbar").value;
                 if (event.key === "Enter") {
-//                    parent.document.getElementById('search-searchbar').setAttribute('placeholder', text);
+                    //                    parent.document.getElementById('search-searchbar').setAttribute('placeholder', text);
                     //                    console.log(text);
                     //                    console.log(parent.document.getElementById('search-searchbar').getAttribute('placeholder'));
                     window.location.href = '/search';

@@ -115,16 +115,16 @@ body {
 }
 
 .submission-bookmark {
-    transform: translate(67%, 150%);
+    transform: translate(79%, 152%);
 }
 
 .submission-play {
     font-size: 7rem;
-    transform: translate(112.5%, 58%);
+    transform: translate(120%, 61%);
 }
 
 .submission-like {
-    transform: translate(440%, 150%);
+    transform: translate(454%, 152%);
 }
 
 
@@ -953,7 +953,7 @@ label.upload-file::before {
 
 .side-bar,
 .main {
-    margin-top: 25rem;
+    margin-top: 20rem;
 }
 
 .side-bar {
@@ -1018,12 +1018,6 @@ label.upload-file::before {
     padding-bottom: .5rem;
     position: absolute;
     transform: translate(0rem, -2rem);
-
-    /*    padding: 1.5rem;*/
-    /*
-    padding-left: 8rem;
-    padding-top: 4rem;
-*/
 }
 
 .search-searchbar::placeholder {
